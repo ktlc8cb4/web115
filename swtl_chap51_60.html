@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Vegan Deer :: SWTL 51-60</title>
+	<link rel = "stylesheet" type = "text/css" href = "styles/swtl.css" />
+	<link rel = "stylesheet" type = "text/css" href = "styles/swtl_master.css" />
+	<link rel = "stylesheet" type = "text/css" href = "styles/swtl_chapters_51_60.css" />
+	<script src="scripts/swtl_chapters_51_60.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Almendra%20Display" rel="stylesheet">		
+		<link href="https://fonts.googleapis.com/css?family=Kite%20One" rel="stylesheet">
+	<!--
+	Name: Kim Le
+		   Assignment: M9B - SWTL JS Chapters 51 - 60 
+		   Course: Web 115 - Web Markup and Scripting
+		   -->    
+</head>
+
+<body>
+	<header> The Vegan Deer <h2 class="rightText"> A place for gentle dining.</h2></header>  
+	<nav> 		
+	  <ul>			
+				<li><a href="http://students.cpcc.edu/~ktlc8cb4/public_html/web115/">Webspace</a></li>
+				<li><a href="https://github.com/ktlc8cb4">GitHub</a></li>
+				<li><a href="https://ktlc8cb4.github.io/">GitHub Website</a></li>
+				<li><a href="https://ktlc8cb4.github.io/web115/">GitHub Pages</a></li>
+				<li><a href="https://www.freecodecamp.org/ktlc8cb4">Freecodecamp</a></li>
+				<li><a href="https://www.codecademy.com/profiles/KimLe33">Codecademy</a></li>
+				<li><a href="https://www.khanacademy.org/profile/kaid_655162339461744285666695/">Khan Academy</a></li>
+				<li><a href="https://jsfiddle.net/user/ktlc8cb4/">JsFiddle</a></li>
+				<li><a href="https://profile.edx.org/u/ktlc8cb4">EdX</a></li>
+				<li><a href="https://blackboard.cpcc.edu/webapps/Bb-wiki-BBLEARN/wikiView?course_id=_976875_1&wiki_id=_18929_1&page_guid=b5f5751732f14958b689e3c2c91814ef">
+						LinkedIn</a></li>					
+				</ul> 	
+	</nav> 
+	
+<div id="wrapper">
+	<main>
+		
+		<h1>Smarter Way To Learn JS</h1>
+	   	<h1> Chapters 51 - 60 </h1>
+	
+		<!-- Chapter 51 -->
+		<h2> Chapter 51 Concepts: Reading and Setting Paragraph Text.</h2>
+		 <p>We can use innerHTML to read or to set text for an HTML element.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax</h3>
+			 <p>We assign the content we read from an HTML element to a variable to capture the information. We also need to give the targeted element an ID.</p>
+			 <pre>
+var someVar =
+  document.getElementById(&quot;ID&quot;).innerHTML;			 </pre>
+			 <p>To set the content for an HTML element, we also need to give that element an ID.			 </p>
+			 <pre>
+document.getElementById(&quot;ID&quot;).innerHTML =
+  content;			 		</pre>
+	    </div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>Setting text for an HTML element. Assuming the HTML element has an ID of &quot;myDeer&quot;.</p>
+			 <pre>
+document.getElementById(&quot;myDeer&quot;)
+  .innerHTML = &quot;Hello, my Deer!&quot;;			 </pre>
+			 <p>Getting text from an element with the ID of &quot;myDeer&quot;	and	assign	that content to a variable named deerGreeting.</p>
+			 <pre>
+var deerGreeting = 
+  document.getElementById(&quot;myDeer&quot;)
+    .innerHTML;					</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will demonstrate by expanding the paragraph about the aspiration of <span class="fontAlmendraDisplay bold">The Vegan Deer.</span></p>
+			<p id="guess51">Deer are gentle creatures, so gentle that the word we use to call our loved one, Dear, sounds just like Deer. <a href="Javascript:void(0)" onclick="chapter51()"> Read more...</a></p>
+			
+		</div>	
+		
+		<!-- Chapter 52 -->
+	
+			 <h2> Chapter 52 Concepts: Manipulating Images and Text.</h2>
+		 <p>We can use .className to set a class for an HTML element.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax</h3>
+			 <p>To set a class for an HTML element, it is required that there is a class defined in CSS. Again, since we are using the document.getElementById method, it is required that the HTML has a set ID.</p>
+			 <p>Using the method shown in the syntax below will erase all classes that are currently set for the HTML element.</p>
+			 <pre>
+document.getElementById(&quot;ID&quot;).className =
+  &quot;class&quot;;			 </pre>
+			 <p>Using the method shown in the syntax below will preserve the currently set classes for the HTML element.	Notice	the	difference is the extra + sign in front of the equal sign and the space before the &quot; class&quot; declaration.</p>
+			 <pre>
+document.getElementById(&quot;ID&quot;).className +=
+  &quot; class&quot;;			 		</pre>
+	    </div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>In the example below, we will make our Deer turn red when we click on them.</p>
+			 <pre>
+/* CSS: defining a class */
+.redDeer { background-color: red;}
+
+/* HTML markup - using an h2 element */
+&lt;h2 id=&quot;reddeer&quot; onclick=&quot;redDeer()&quot;&gt;
+  The Vegan Deer
+&lt;/h2&gt;
+
+/* Scripts */
+function redDeer() {
+  document.getElementById(&quot;reddeer&quot;)
+    .classname = &quot;redDeer&quot;;
+}</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will usse the example above to turn our Deer white and its background red when we click on them. We will preserve their size too.</p>
+			<p class="demoP"><span id="guess52" class="fontAlmendraDisplay bold">The Vegan Deer</span></p>
+			<button class="demonstrateButton" onclick="chapter52()">Change Our Deer</button>
+			
+		</div>	
+		
+		<!-- Chapter 53 -->
+	
+			 <h2> Chapter 53 Concepts: Swapping Images.</h2>
+		 <p>We can use .src to swap images when an event is triggered on an img element.</p>
+		
+	  <div class="darkGreen">
+			 <h3> Syntax</h3>
+	    <p>In the syntax below, the image inside the quotation marks is the image used to replace the existing image.</p>
+		  <pre>
+document.getElementById(&quot;ID&quot;). src =
+  &quot;image&quot;;</pre>
+			
+	  </div>
+		
+	  <div class="darkGreen">
+			<h3> Example </h3>
+		<p>Switching an image of a deer to a deer eating grass.</p>
+		   <pre>
+/* HTML markup */
+&lt;img src=&quot;deer.jpg&quot; id=&quot;before&quot;
+  onclick=&quot;changePic();&quot;&gt;
+
+/* Scripts */
+function changePic() {
+  document.getElementById(&quot;before&quot;)
+    .src=&quot;deereatinggrass.jpg&quot;;
+}</pre>
+	  </div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will use the example above to change an image from a deer to a deer eating grass.</p>
+		  <figure>
+			<img class="demoP" id="guess53" alt="a deer standing in the woods" src="images/deer.jpg">
+				<figcaption id="guess53_1">A deer standing in the woods</figcaption>
+		  </figure>
+			<button class="demonstrateButton" onclick="chapter53()">Change Image</button>
+			
+		</div>	
+		
+		<!-- Chapter 54 -->
+	
+			 <h2> Chapter 54 Concepts: Swapping Images and Setting Classes.</h2>
+		 <p>We can assign the whole phrase document.getElementById(&quot;ID&quot;) to a variable. Then we can use that variable to perform various functions on that element.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+		   <p>Below is a syntax to assign the phrase document.getElementById to a variable. Then we use that variable in various functions. Only three examples of syntax are given below; however, the functions that can be performed on that variables should include any functions that can be performed when using document.getElementById.</p>
+			 <pre>
+// Assign the phrase to a variable.
+var someVar = 
+  document.getElementById(&quot;ID&quot;);
+
+// Performing functions on that variable
+someVar.src = &quot;image&quot;;
+someVar.innerHTML = &quot;some text&quot;;
+someVar.className = &quot;class&quot;;</pre>
+			
+	  </div>
+		
+	  <div class="darkGreen">
+			<h3> Example </h3>
+	    <p>We are going to change our deer picture to a deer eating grass as in chapter 53. However, in this example, we will using the concepts in chapter 54. </p>
+		   <pre>
+/* HTML markup */
+&lt;img src=&quot;deer.jpg&quot; id=&quot;deer&quot; 
+  onclick=&quot;changePic()&quot; alt=&quot;&quot;&gt;
+
+/* Scripts */
+function changePic() {
+  var deerPic = 
+  document.getElementById(&quot;deer&quot;);
+  deerPic.src = &quot;deereatinggrass.jpb&quot;;
+}</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>Let's change our deer image using our example above. </p>
+			<figure>
+				<img src="images/deer.jpg" alt="A deer standing in the woods" id="guess54">
+				<figcaption id="guess54_1">A deer standing in the woods</figcaption>
+			</figure>
+			<button class="demonstrateButton" onclick="chapter54()">Change Image</button>
+			
+		</div>
+		
+		<!-- Chapter 55 -->
+		
+	
+			 <h2> Chapter 55 Concepts: Setting Styles.</h2>
+		 <p>we can use .style to set or read the styles of an HTML element.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <p>The syntax below is to set or to read the styles for the HTML element.</p>
+			 <pre>
+// To set styles
+document.getElementById(&quot;ID&quot;).style
+  .property =
+  &quot;value&quot;;
+
+// To get styles
+var someVar = 
+  document.getElementById(&quot;ID&quot;).style
+    .property;		 </pre>
+		   <p>Points to remember:</p>
+			 <ul>
+				 <li>You can style many HTML properties using this technique.</li>
+				 <li>It's best to look up the correct keywords for the properties.</li>
+				 <li>Reading styles can be tricky since some browsers do not support it, or the code only specifies for the document to read the inline styles only.	  </li>
+			 </ul>
+	  </div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+		  <p>In this example, we use .style.property to make our Vegan Deer heading grow bigger.</p>
+			 <pre>
+// HTML markup
+&lt;h2 id=&quot;bigger&quot; onclick=&quot;makeBigger()&quot;&gt;
+  The Vegan Deer
+&lt;/h2&gt;
+
+// Scripts
+function makeBigger() {
+  document.getElementById(&quot;bigger&quot;)
+    .style.fontSize = &quot;3em&quot;;
+}</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will use our example above and make our Deer grow bigger.</p>
+			<p class="demoP"><span id="guess55" class="fontAlmendraDisplay bold">The Vegan Deer</span></p>
+			<button class="demonstrateButton" onclick="chapter55()">See Our Deer Grow</button>
+		</div>
+		
+		<!-- Chapter 56 -->
+	
+			 <h2> Chapter 56 Concepts: Target All Elements by Tag Name.</h2>
+		 <p>We can target HTML elements by using their tag names.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <pre>
+document.getElemensByTagName(&quot;tagname&quot;);			 </pre>
+			 <p>Points to remember:</p>
+			 <ul>
+			 <li>The elements targeted by using getElementsByTagName are stored like an array.</li>
+			 <li>We can access the elements in this array by indexing. </li>
+			 <li>We can get or set information from or to the elements by accessing them using the array indexing technique.		</li></ul>
+	    </div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>This example shows how we get all paragraph elements and change the background color for the third paragraph</p>
+			 <pre>
+/* HTML markup */
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;
+ &lt;p&gt;The deer is a gentle creature.&lt;/p&gt;
+ &lt;p&gt;Deer are cute&lt;/p&gt;
+ &lt;p onclick=&quot;changeParaColor&quot;&gt;
+		Deer are vegan!
+	&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+/* Scripts */
+function changeParaColor() {
+ var deerPara =
+  document.getElementsByTagName(&quot;p&quot;);
+ deerPara[2].style.backgroundColor = 
+  &quot;red&quot;;
+}</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will use the example above to hightlight the third sentence below with the color of red. </p>
+			<div id="guess56">
+			<p class="demoP">The deer is a gentle creature.</p>
+			<p class="demoP">Deer are cute.</p>
+			<p class="demoP">The special thing about them is they are vegan!</p>
+				<button class="demonstrateButton" onclick="chapter56()">Highlighted Sentence</button>
+			</div>
+			
+	  </div>	
+		
+		<!-- Chapter 57 -->
+	
+	  <h2> Chapter 57 Concepts: Target Some Elements By Tag Name.</h2>
+		 <p>When we use document.getElementsByTagName, we select all the elements with that tag name in the whole document from the beginning to the end. This chapter shows us how to only get a elements by tag name in a specific section of the document.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax</h3>
+			 <p>To get elements by tag name in one specific section, we use a &lt;div&gt; with a specific ID. We first getElementById for that specific div. Then we can get all elements by tag name in that div.</p>
+			 <p>We use the &lt;p&gt; elements in this syntax; however, this technique applies to all HTML elements.</p>
+		   <p>Also, we store the value from document.getElementsByTagName to a variable. We don't always have to do that depending on how we use the document.getElementsByTagName values.</p>
+			 <pre>
+/* HTML markup */
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;
+ &lt;div id=&quot;id&quot;&gt;
+  &lt;p&gt;Content&lt;/p&gt;
+  &lt;p&gt;Content&lt;/p&gt;
+  &lt;p&gt;Content&lt;/p&gt;
+ &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+/* Scripts */
+var someVar = 
+  document.getElementsById(&quot;id&quot;);
+var someOtherVar =
+  someVar.getElementsByTagName(&quot;p&quot;);</pre>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>Because this section is similar to the last section, we will use the same example to highlight the third paragraph; however, it differs in where we add the &lt;div&gt; element, so we can target its ID. </p>
+			 <pre>/* HTML markup */
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;
+ &lt;div id=&quot;deerDiv&quot;&gt;
+  &lt;p&gt;The deer is a gentle creature.&lt;/p&gt;
+  &lt;p&gt;Deer are cute&lt;/p&gt;
+  &lt;p&gt;Deer are vegan!&lt;/p&gt;
+ &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+/* Scripts */
+function changeParaColor() {
+ var deerSection = 
+  document.getElementById(&quot;deerDiv&quot;);
+ var deerPara =
+  deerSection.getElementsByTagName(&quot;p&quot;);
+ deerPara[2].style.backgroundColor = 
+  &quot;red&quot;;
+}</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>At The Vegan Deer, we always give away one free item with a purchase of two other items. However, our Deer have to click on the button to find out what item is free because it is just random. </p>
+			<h2 style="margin-left: 70px;">Menu</h2>
+			<ul id="ul57">
+				<li>Broccoli and cheese</li>
+				<li>Egg salad</li>
+				<li>Tofu dog</li>
+				<li>Veggie burger</li>
+				<li>Zesty zoodles</li>
+				<li>Pumpkin soup</li>
+				<li>Potato salad</li>
+				<li>Sweet potato fries</li>
+			</ul>
+		  <button class="demonstrateButton" onclick="chapter57()">Free Item</button>
+			<p class="demoP" id="guess57"></p>
+		</div>	
+		
+		
+		<!-- Chapter 58 -->
+	
+	  <h2> Chapter 58 Concepts: The DOM.</h2>
+		 <p>Points to remember:</p>
+		<ul>
+			<li>DOM stands for Document Object Model.</li>
+			<li>The DOM is an organizational chart created automatically by the browser.</li>
+			<li>Every element in an HTML Document, which is a web page, has a spot on this organizational chart.</li>
+			<li>We can compare the DOM to a company organizational chart that includes everyone from the CEO down to all employees. Like a company who allows an outsider to contact any employee  if the outsider knows that employer's email address or phone number or some form of employee identification, the DOM gives each of its elements an &quot;address&quot; to allow the outsider, Javascript in this case, to access every element inside that DOM as long as Javascript names the correct &quot;address&quot;.</li>
+			<li>Each element inside a DOM is called a Node. </li>
+		</ul>
+		
+	  <div class="darkGreen">
+			<h3> Example </h3>
+	    <p>There is no code examples for this chapter. Below is an HTML document. This example just shows what the Nodes of this document are.</p>
+			 <pre>
+/* HTML markup */
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;
+ &lt;div id=&quot;deerDiv&quot;&gt;
+  &lt;p&gt;The deer is a gentle creature.&lt;/p&gt;
+  &lt;p&gt;Deer are cute&lt;/p&gt;
+  &lt;p&gt;Deer are vegan!&lt;/p&gt;
+ &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;		 </pre>
+			 <p>Each element within the pair of &lt; &gt; tags is a Node in this HTML document. </p>
+	    <p>In the above example, the nodes are the &lt;html&gt;, &lt;head&gt;, &lt;body&gt;, &lt;div&gt;, and all three &lt;p&gt; elements. </p>
+		   <p>&nbsp;</p>
+		</div>
+		
+	  <div class="lightYellow">
+			<h2> Demonstrations and Syntax</h2>
+			<p>There are no demonstrations or syntax for this chapter since it only gives information about the DOM. </p>
+			
+	  </div>	
+		
+		<!-- Chapter 59 -->
+	
+	  <h2> Chapter 59 Concepts: The DOM: Parents and Children.</h2>
+	  <p>Points to remember:</p>
+		<ul>
+		 <li>To review: Each element in the DOM is called a Node.</li>
+		 <li>Each node can be considered a parent of some other nodes, and each node can also be a child of another node.</li>
+		 <li>A node is a child of the node the encloses it.</li>
+		 <li>Nodes like &lt;em&gt;, &lt;strong&gt;, &lt;span&gt; are also nodes that are the parents of the text within their enclosure.</li>
+		</ul>
+		 <div class="darkGreen">
+		   <h3>Example</h3>
+			 <p>We will use the same HTML markup for the last chapter's example to show the parents and the children in the document.</p>
+			 <pre>/* HTML markup */
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;
+ &lt;div id=&quot;deerDiv&quot;&gt;
+  &lt;p&gt;The deer is a gentle creature.&lt;/p&gt;
+  &lt;p&gt;Deer are cute&lt;/p&gt;
+  &lt;p&gt;Deer are vegan!&lt;/p&gt;
+ &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;	</pre>
+			 <p>Below is the list of the parent and child relationship in the example</p>
+			 <ul>
+				 <li>The top most level of the DOM is the &lt;html&gt; element. </li>
+				 <li>The &lt;head&gt; is the first child of &lt;html&gt;, the &lt;body&gt; is the second child of &lt;html&gt;. In reverse, &lt;html&gt; is the parent of both &lt;head&gt; and &lt;body&gt;.</li>
+				 <li>The &lt;div&gt; is the first child of &lt;body&gt;. In reverse, &lt;body&gt; is the parent of &lt;div&gt;.</li>
+				 <li>The three &lt;p&gt; are first, second, and third child of &lt;div&gt; in the order they appear in the document. In reverse, &lt;div&gt; is the parent of all three &lt;p&gt; nodes.	    </li>
+			 </ul>
+	    </div>
+		 <div class="darkGreen">
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration and Syntax</h2>
+			<p>There are no demonstration and syntax for this chapter since it only gives information about the DOM.		</p>
+		</div>	
+	
+		<!-- Chapter 60 -->
+			 <h2> Chapter 60 Concepts: The DOM: Finding Children.</h2>
+		 <p>We can use .childNode[] to target specific HTML element in the DOM per the parent-children relationship. </p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <pre>
+document.childNodes[index]
+        .childNodes[index]
+        .childNodes[index];			 </pre>
+			 <p>Points to remember:</p>
+			 <ul>
+				 <li>The index is the number of its order in the enclosure of its parent.</li>
+				 <li>In the syntax above, each childNode is the children of the previous childNode. The syntax only shows 3 childNodes, but we can chain as many childNode as necessary to get to our targeted element. </li>
+				 <li>Children are stored in an array. So we place the index number like that of an array inside the square brackets to access the childNode we want.</li>
+			 </ul>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>We will use the simple HTML document in the previous example to access the third paragraph within the body using the .childNode[] technique.</p>
+			 <pre>
+/* HTML markup */
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;The deer is a gentle creature.&lt;/p&gt;
+  &lt;p&gt;Deer are cute&lt;/p&gt;
+  &lt;p&gt;Deer are vegan!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+/* Scripts */
+
+var deerPara =
+ document.childNodes[0].childNode[1]
+         .childNodes[2];</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will use the .childNodes[] technique to target the second sentence and change it. Please note that I have only tested this example on Edge, Chrome, and Firefox. </p>
+			<div id="div60">
+			  <p class="demoP">The deer is a gentle creature.</p>
+			  <p class="demoP">Deer are cute.</p>
+			  <p class="demoP">Deer are vegans!</p>
+			</div>
+			<button class="demonstrateButton" onclick="chapter60()">How Cute are Deer?</button>
+		</div>
+		
+  </main>
+	</div>
+		
+	<footer> Designed by &nbsp;<span class="fontAlmendraDisplay bold">The Vegan Deer </span>
+		<p> Homework Help:   <a href="https://stackoverflow.com/questions/19138758/how-to-align-caption-underneath-image">StackOverflow,</a>
+			<a href="https://www.w3schools.com/js/js_switch.asp">W3schools</a><br>
+		</p>
+		<p>Image Source: <a href="https://unsplash.com/">Unsplash</a></p>
+			
+	  <button onclick="window.location.href='http://validator.w3.org/check?uri=referer'">&check; HTML</button>
+	  <button onclick="window.location.href='http://jigsaw.w3.org/css-validator/check/referer'">&check; CSS</button>  
+    </footer>
+
+</body>
+</html>

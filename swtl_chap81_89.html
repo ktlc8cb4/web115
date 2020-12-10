@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Vegan Deer :: SWTL 81-89</title>
+	<link rel = "stylesheet" type = "text/css" href = "styles/swtl.css" />
+	<link rel = "stylesheet" type = "text/css" href = "styles/swtl_master.css" />
+	<link rel = "stylesheet" type = "text/css" href = "styles/swtl_chapters_61_70.css" />
+	<script src="scripts/swtl_chapters_81_89.js" async></script>
+	<link href="https://fonts.googleapis.com/css?family=Almendra%20Display" rel="stylesheet">		
+		<link href="https://fonts.googleapis.com/css?family=Kite%20One" rel="stylesheet">
+	<!--
+	Name: Kim Le
+		   Assignment: M9B - SWTL JS Chapters 81 - 89 
+		   Course: Web 115 - Web Markup and Scripting
+		   -->    
+</head>
+
+<body onLoad="chapter81();">
+	<header> The Vegan Deer <h2 class="rightText"> A place for gentle dining.</h2></header>  
+	<nav> 		
+	  <ul>			
+				<li><a href="http://students.cpcc.edu/~ktlc8cb4/public_html/web115/">Webspace</a></li>
+				<li><a href="https://github.com/ktlc8cb4">GitHub</a></li>
+				<li><a href="https://ktlc8cb4.github.io/">GitHub Website</a></li>
+				<li><a href="https://ktlc8cb4.github.io/web115/">GitHub Pages</a></li>
+				<li><a href="https://www.freecodecamp.org/ktlc8cb4">Freecodecamp</a></li>
+				<li><a href="https://www.codecademy.com/profiles/KimLe33">Codecademy</a></li>
+				<li><a href="https://www.khanacademy.org/profile/kaid_655162339461744285666695/">Khan Academy</a></li>
+				<li><a href="https://jsfiddle.net/user/ktlc8cb4/">JsFiddle</a></li>
+				<li><a href="https://profile.edx.org/u/ktlc8cb4">EdX</a></li>
+				<li><a href="https://blackboard.cpcc.edu/webapps/Bb-wiki-BBLEARN/wikiView?course_id=_976875_1&wiki_id=_18929_1&page_guid=b5f5751732f14958b689e3c2c91814ef">
+						LinkedIn</a></li>					
+				</ul> 	
+	</nav> 
+	
+	<div id="wrapper">
+	<main>
+		
+		<h1>Smarter Way To Learn JS</h1>
+	   	<h1> Chapters 81 - 89</h1>
+		
+		<!-- Chapter 81 -->
+	
+		<h2> Chapter 81 Concepts: Browser Control: Testing for Popup Blockers.</h2>
+	  <p>This chapter shows us how to test for popup blockers from the browser of the users.</p>
+	  <p>The test will pop up a window so fast the users will not notice it. If the test passes, the window handle will have a value. If it doesn't pass, the handle will have a null value, after which, we can ask the users to allow popups.</p>	
+	  <div class="darkGreen">
+	    <h3> Syntax</h3>
+			 <p>The syntax belows shows us how to test for popu and ask the users to allow popup if the test fails.			 </p>
+			 <pre>
+// Function for popup test
+
+function checkPopUp() {
+ var test = window.open(&quot;&quot;,
+                        &quot;&quot;,
+                        &quot;size if used&quot;);
+ if(test===null||typeof(test===
+                        &quot;undefined&quot;){
+  alert(&quot;Ask users to disable popup&quot;);
+ }
+
+// Closing the test popup window
+
+test.close(); 
+}
+
+// Running the test in HTML
+
+&lt;body onLoad=&quot;checkPopUp();&quot;&gt;</pre>
+			 <p>Notes to remember</p>
+			 <ul>
+				 <li>All browers returns null if popup test fails except for Internet Explorer. It returns &quot;undefinned&quot; instead of &quot;null&quot;. So to cover all bases, we add the part - ||typeof(test===&quot;undefined&quot;) to make sure it also works for Internet Explorer.</li>
+				 <li>The syntax above also shows how to run the test which is normally run when the page loads.</li>
+			 </ul>
+	  </div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>This example will use the similar code in the syntax to test for popup blockers.</p>
+			 <pre>// Function for popup test
+
+function checkPopUp() {
+ var test = window.open(&quot;&quot;,
+                        &quot;&quot;,
+                        &quot;width=100,
+                         height=100&quot;);
+ if(test===null||typeof(test===
+                        &quot;undefined&quot;){
+  alert(&quot;Ask users to disable popup&quot;);
+ }
+test.close();
+} 
+
+// Running the test in HTML
+
+&lt;body onLoad=&quot;checkPopUp();&quot;&gt;</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>The demonstration for this chapter has already demonstrated when you loaded this page. If you have blocked popups, you should see a message below this paragraph to ask you to disable your popup blocker. If you have not blocked popups, then you should see a message to thank you for allowing popups.</p>
+			<p class="demoP" id="guess81"></p>
+		</div>	
+		
+		<!-- Chapter 82 -->
+	
+	  <h2> Chapter 82 Concepts: Form Validation: Text Fields.</h2>
+      <p>This chapter shows us how to validate the user input when filling out forms. It focuses on checkign for NAMES such as last names or first names entered by users.</p>
+		
+	     <div class="darkGreen">
+		     <h3> Syntax			 </h3>
+			 <p>The syntax </p>
+			 <pre>
+// HTML Form Block
+
+&lt;form onSubmit=&quot;return checkFunction();&quot;&gt;
+ &lt;label&gt;label&lt;/label&gt;&lt;br&gt;
+ &lt;input type=&quot;text&quot; id=&quot;id&quot;&gt;
+ &lt;input type=&quot;submit&quot; 
+        value=&quot;Submit Form&quot;&gt;
+&lt;/form&gt;
+
+// Script for checkFunction()
+
+function checkFunction(){
+ var targetField =
+  document.getElementById(&quot;id&quot;);
+ if(targetField.value.length === 0) {
+  alert(&quot;an alert message&quot;);
+  targetField.focus();
+  targetField.style.background = &quot;color&quot;;
+  return false;
+ }
+ targetField.style.background = &quot;color&quot;;
+}			 </pre>
+			 <p>Notes to remember:</p>
+			 <ul>
+				 <li>When the users press Submit Form, checkFunction() is activated.</li>
+				 <li>This function checks to see whether the users have entered anything at all.</li>
+				 <li>Inside the checkFunction(), the alert message can be anything you want it to be. It does not have to be an alert.</li>
+				 <li>The statement - return false - prevents the form to be submitted since the form has not been filled out.</li>
+				 <li>Notice that when the code is called in the onSubmit event after form, the return statement is also there. Without this statement, the form will be submitted even if the users have not entered the information.</li>
+				 <li>The statement targetField.focus() is to make it user friendly by focusing on the form field the users have not entered.</li>
+				 <li>After the targetField is focused, we set the background color to a different color to give further focus on the field we want the users to focus on.</li>
+				 <li>After the return false statement, we change the style of the target field back to its original. This statement returns the field to the original color when the users are taken back to the form when they press submit again.</li>
+				 <li>The syntax above uses document.getElementById, but we can use any other tagetting technique to get the element.</li>
+			 </ul>
+			
+		</div>
+	  <div class="darkGreen">
+			<h3> Example </h3>
+		<p>The example below follow the syntax above to check for a Last Name field to see if the users have entered any information at all.</p>
+		   <pre>// HTML Form Block
+
+&lt;form onSubmit=&quot;return checkLastName();&quot;&gt;
+ &lt;label&gt;Please enter last name&lt;/label&gt;&lt;br&gt;
+ &lt;input type=&quot;text&quot; id=&quot;lastname&quot;&gt;
+ &lt;input type=&quot;submit&quot; 
+        value=&quot;Submit Form&quot;&gt;
+&lt;/form&gt;
+
+// Script for checkFunction()
+
+function checkLastName(){
+ var lastName =
+  document.getElementById(&quot;lastname&quot;);
+ if(targetField.value.length === 0) {
+  alert(&quot;an alert message&quot;);
+  targetField.focus();
+  targetField.style.background = &quot;yellow&quot;;
+  return false;
+ }
+ targetField.style.background = &quot;green&quot;;
+}			 </pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h3> Demonstration</h3>
+			<p>We will use the example above to check for a last name field that we ask you to enter. </p>
+		  <form action="javascript:void(0)" onSubmit="return chapter82();">
+ 				<label id="guess82">Please enter last name</label><br>
+ 				<input type="text" id="lastname">
+ 				<input type="submit" value="Submit Form" class="demonstrateButton">
+			</form>
+		</div>
+		
+		<!-- Chapter 83 -->
+		
+	
+	  <h2> Chapter 83 Concepts: Form Validation: Drop-downs.</h2>
+		 <p>This chapter shows us how to validate a drop-down menu to make sure the users have selected an item. </p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <pre>// HTML Form Block
+
+&lt;form 
+ onSubmit=&quot;return checkFunction(&quot;id&quot;);&quot;&gt;
+ &lt;select id=&quot;id&quot;&gt;
+  &lt;option value=&quot;&quot; selected=&quot;selected&quot;&gt; 
+  Select Message&lt;/option&gt;
+   &lt;option value=&quot;value1&quot;&gt;Value1&lt;/option&gt;
+   &lt;option value=&quot;value2&quot;&gt;Value2&lt;/option&gt;
+   &lt;option value=&quot;value3&quot;&gt;Value3&lt;/option&gt;
+ &lt;/select&gt;&lt;br&gt;
+ &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+
+// Script for checkFunction()
+
+function checkFunction(selectID){
+ var targetField =
+  document.getElementById(&quot;selectID&quot;);
+ if(targetField.selectedIndex === 0) {
+  alert(&quot;an alert message&quot;);
+  return false;
+ }
+}			 </pre>
+			 <p>Notes to remember:</p>
+			 <ul>
+				 <li>There are similarities between this function and the function of the last chapter such as the return false statement and the alert message.</li>
+				 <li>The &quot;selectedID&quot; as the parameter of the checkFunction allows for this code to be resued for a different ID. </li>
+				 <li>Notice that when calling the function if onSubmit, the &quot;id&quot; is passsed as an argument to check the form of that specific ID.</li>
+			 </ul>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>We will follow the syntax above to create a select menu and validate that the users have picked an item.</p>
+			 <pre>// HTML Form Block
+
+&lt;form 
+ onSubmit=&quot;return checkSelect(order);&quot;&gt;
+ &lt;select id=&quot;order&quot;&gt;
+  &lt;option value=&quot;&quot; selected=&quot;selected&quot;&gt; 
+  Please select an item&lt;/option&gt;
+   &lt;option 
+    value=&quot;broccoli&quot;&gt;Broccoli&lt;/option&gt;
+   &lt;option
+    value=&quot;avocado&quot;&gt;Avocado&lt;/option&gt;
+   &lt;option 
+    value=&quot;salad&quot;&gt;Salad&lt;/option&gt;
+ &lt;/select&gt;&lt;br&gt;
+ &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+
+// Script for checkFunction()
+
+function checkFunction(selectID){
+ var targetMenu =
+  document.getElementById(selectID);
+ if(targetMenu.selectedIndex === 0) {
+  alert(&quot;Please select an item&quot;);
+  return false;
+ }
+}			 </pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will use the example above to produce a menu and ask our Deer to select an item, and we will validate that the users have picked an item or not.</p>
+			<form action="javascript:void(0)" onSubmit="return chapter83('order');">
+				<select id="order" class="selectMenu">
+					<option value="" selected="selected">Please select an item</option>
+					<option value="broccoli">Broccoli</option>
+					<option value="avocado">Avocado</option>
+					<option value="salad">Salad</option></select><br>
+				<input type="submit" value="Submit" class="demonstrateButton">
+			</form>
+			<p class="demoP" id="guess83"></p>
+		</div>	
+		
+		<!-- Chapter 84 -->
+	
+	  <h2> Chapter 84 Concepts: Form Validation: Radio Buttons.</h2>
+		 <p>This chapter shows us how to validate a form with radio buttons.		 </p>
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <pre>
+// The HTML form
+
+&lt;form 
+ onSubmit=&quot;return 
+           checkFunction('radioName');&quot;&gt;
+ &lt;input type=&quot;radio&quot; 
+        name=&quot;radioName&quot;
+		  value=&quot;value1&quot;&gt;Value1&lt;br&gt;
+ &lt;input type=&quot;radio&quot; 
+        name=&quot;radioName&quot;
+		  value=&quot;value2&quot;&gt;Value2&lt;br&gt;
+ &lt;input type=&quot;radio&quot; 
+        name=&quot;radioName&quot;
+		  value=&quot;value3&quot;&gt;Value3&lt;br&gt;
+ &lt;input type=&quot;submit&quot;
+        value=&quot;Submit&quot;&gt;
+&lt;/form
+
+// Script of checkFunction
+
+function checkFunction(name) {
+ var radios = 
+  document.getElementsByName(name);
+ for(var i=0;i&lt;radios.length;i++) {
+  if(radios[i].checked){
+   return true;
+  }
+ }
+ alert(&quot;an alert message&quot;);
+ return false;
+}     </pre>
+		   <p> Notes to remember:</p>
+			 <ul>
+				 <li>Again, the return false statements are needed for this validation as well.</li>
+				 <li>All the radio buttons have the same value for the name attribute.</li>
+				 <li>.By using the parameter &quot;name&quot;, we can allow for this code to be used to check for more than one Radion Forms.</li>
+			 </ul>
+			
+		</div>
+		
+		<div class="darkGreen">
+			 <h3>Example</h3>
+			 <p>We will follow the syntax above to create this example to check to see if our Deer have selected a menu item.</p>
+			 <pre>
+// The HTML form
+
+&lt;form 
+ onSubmit=&quot;return checkRadio('item');&quot;&gt;
+ &lt;input type=&quot;radio&quot; 
+        name=&quot;item&quot;
+		  value=&quot;value1&quot;&gt;Value1&lt;br&gt;
+ &lt;input type=&quot;radio&quot; 
+        name=&quot;item&quot;
+		  value=&quot;value2&quot;&gt;Value2&lt;br&gt;
+ &lt;input type=&quot;radio&quot; 
+        name=&quot;item&quot;
+		  value=&quot;value3&quot;&gt;Value3&lt;br&gt;
+ &lt;input type=&quot;submit&quot;
+        value=&quot;Submit&quot;&gt;
+&lt;/form
+
+// Script of checkFunction
+
+function checkFunction(name) {
+ var items = 
+  document.getElementsByName(name);
+ for(var i=0;i&lt;items.length;i++) {
+  if(items[i].checked){
+   return true;
+  }
+ }
+ alert(&quot;Please check an item&quot;);
+ return false;
+}</pre>
+	  </div>
+		
+	  <div class="lightYellow">
+			<h2> Demonstration.</h2>
+			<p>We will use the example above to validate to make sure our Deer have selected an item.</p>
+	    <form action="javascript:void(0)" onSubmit="return chapter84('item');">
+				<label>Please check an item.</label><br>
+		  <input type="radio" name="item" value="broccoli">Broccoli<br>
+				<input type="radio" name="item" value="avocado">Avocado<br>
+				<input type="radio" name="item" value="salad">Salad<br>
+				<input type="submit" value="Submit" class="demonstrateButton">
+		  </form>
+		  <p class="demoP" id="guess84"></p>
+			
+	  </div>	
+		
+		<!-- Chapter 85 -->
+	
+			 <h2> Chapter 85 Concepts: Form Validation: ZIP Codes.</h2>
+		 <p>This chapter shows us how to check to make sure the users haven't entered too few digits, and only numbers for the ZIP code.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <pre>
+function validateZip(){
+ var numChars = 
+  document.getElementById(&quot;zip&quot;)
+          .value.length;
+ if(numChars &lt; 5) {
+  alert(&quot;Alert message&quot;);
+  return false;
+ }
+ for(var i=0;i&lt;=4;i++){
+  var thisChar=parseInt(valueEntered[i]);
+   if(isNaN(thisChar)){
+    alert(&quot;Alert message&quot;);
+    return false;
+   }
+ }
+}</pre>
+			 <p>Note to remembers:</p>
+			 <ul>
+				 <li>To make sure users haven't not entered too many digits, we can use HTML for text field to have a maxlenght = 5.</li>
+			 </ul>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>This example will follow the syntax above to validate the ZIP code field. </p>
+			 <pre>
+// The HTML form
+
+&lt;form onSubmit=&quot;return validateZip();&quot;&gt;
+ &lt;label&gt;Please enter ZIP code&lt;/label&gt;&lt;br&gt;
+ &lt;input type=&quot;number&quot; id=&quot;zipcode&quot; 
+        maxlength=&quot;5&quot;&gt;
+ &lt;input type=&quot;submit&quot; 
+        value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+
+function validateZip(){
+ var numChars = 
+  document.getElementById(&quot;zip&quot;)
+          .value.length;
+ if(numChars &lt; 5) {
+  alert(&quot;Please enter a 5-digit number.&quot;);
+  return false;
+ }
+ for(var i=0;i&lt;=4;i++){
+  var thisChar=parseInt(valueEntered[i]);
+   if(isNaN(thisChar)){
+    alert(&quot;Please only enter numbers.&quot;);
+    return false;
+   }
+ }
+}</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will use the example above to validate a ZIP field.</p>
+			<form action="javascript:void(0)" onSubmit="return chapter85();" >
+				<label>Please enter ZIP code</label><br>
+				<input type="text" id="zip" maxlength="5" value="">
+				<input type="submit" value="Submit" class="demonstrateButton">
+			</form>
+		  <p class="demoP" id="guess85"></p>
+		</div>	
+	
+		<!-- Chapter 76 -->
+	  <h2> Chapter 86 Concepts: Form Validation: Email.</h2>
+		 <p>This chapter shows us how to validate an Email. </p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <pre>
+// Check for Email Correction
+
+function validateEmail(){
+ var addressIsLegal = true;
+ var eEntered = 
+  document.getElementById(&quot;email&quot;).value;
+  if(eEntered.indexOf(&quot; &quot;)!==-1){
+   alert(&quot;Alert of spaces&quot;);
+   return false;
+  }
+  if eEntered.indexOf(&quot;@&quot;)&lt;1 || eEntered
+     .indexOf(&quot;@&quot;)&gt;eEntered.length-5) {
+   addressIsLegal = false;
+  }
+  if(eEntered.indexOf(&quot;.&quot;)-eEntered
+    .indexOf(&quot;@&quot;)&lt;2 ||
+    eEntered.indexOf(&quot;.&quot;) &gt; eEntered
+    .length-3){
+     addressIsLegal = false;
+  }
+  if(addressIsLegal === false){
+   alert(&quot;Ask for correction&quot;);
+   return false;
+  }
+}
+
+// Using regular Expression to check
+
+function validateEmail(){
+ var eEntered =
+  document.getElementById(&quot;email&quot;).value;
+  var emailCorrectPattern
+   /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\
+   .[a-zA-Z0-9]{2,4}$\;
+ if(!eEntered.match(emailCorrectPattern)))
+ { 
+  alert(&quot;Ask for correction&quot;);
+  return false;
+ }
+} </pre>
+			
+	       <p>Note to remembers:</p>
+             <ul>
+               <li>The syntax above test for a space which is an illegal character in an email. If there are other illegal characters in an email, we will have to use this same syntax to check for them. </li>
+               <li>The first if statement in the syntax checks to see if there is a space. If so, it is not correct.</li>
+               <li>The second if statement checks to see if there is a @ character in the email and there are fewer than 4 characters behind the @, and that the @ is not at the start of the email entered. If so, it is incorrect.</li>
+               <li>The last if statement checks to see if there is a dot behind the @ and that it is at least 2 to 4 characters following the dot. If not, it is incorrect.</li>
+               <li>The second function is to use regular expression to test for a correct email. </li>
+             </ul>
+	    </div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>This example follows the syntax above to validate an Email form field.</p>
+			 <pre>
+// The HTML form
+
+&lt;form 
+ action=&quot;javascript:void(0)&quot; 
+ onSubmit=&quot;return chapter86();&quot; &gt;<br>	&lt;label&gt;Enter Email Address.&lt;/label&gt;&lt; 
+ &lt;input type=&quot;text&quot; id=&quot;email&quot; value=&quot;&quot;&gt;<br> &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; &gt;<br>&lt;/form&gt;
+
+// Check for Email Correction
+
+function validateEmail(){
+ var addressIsLegal = true;
+ var eEntered = 
+  document.getElementById(&quot;email&quot;).value;
+  if(eEntered.indexOf(&quot; &quot;)!==-1){
+   alert(&quot;Alert of spaces&quot;);
+   return false;
+  }
+  if eEntered.indexOf(&quot;@&quot;)&lt;1 || eEntered
+     .indexOf(&quot;@&quot;)&gt;eEntered.length-5) {
+   addressIsLegal = false;
+  }
+  if(eEntered.indexOf(&quot;.&quot;)-eEntered
+    .indexOf(&quot;@&quot;)&lt;2 ||
+    eEntered.indexOf(&quot;.&quot;) &gt; eEntered
+    .length-3){
+     addressIsLegal = false;
+  }
+  if(addressIsLegal === false){
+   alert(&quot;Ask for correction&quot;);
+   return false;
+  }
+}</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will use the example above to check for email correction.</p>
+			<form action="javascript:void(0)" onSubmit="return chapter86();" >
+			  <label>Please enter Email Address.</label>
+			  <br>
+              <input type="text" id="email" value="">
+              <input type="submit" value="Submit" class="demonstrateButton">
+			</form>
+		  <p class="demoP" id="guess86"></p>
+		  
+		</div>	
+		
+		<!-- Chapter 77 -->
+	
+	  <h2> Chapter 87 Concepts: Exceptions: Try and Catch.</h2>
+		 <p>When a code is wirtten incorrectly and the function is run, nothing happens, but Javascript doesn't tell you why. You then have to read through the codes to try to figure it out. This chapter shows us how to use try and catch, so Javascript would report the errors in the codes. </p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <pre>
+function someFunction(){
+ try{
+  function code;
+ }
+ catch(error){
+  alert(error);
+ }
+}		 </pre>
+			 <p>Notes to remember;</p>
+			 <ul>
+				 <li>The function code is wrapped inside a try block</li>
+				 <li>If there is an error, the catch statement will catch that error and alert what the error is. That is because the syntax above is written to dirett Javascript to report the error in an alert. We can choose to have any other actions wihtin the catch block.</li>
+				 <li>Try and Catch are always a pair.</li>
+				 <li>The try block is wrapped in curly brackets. The code within the try block is indented</li>
+				 <li>The parameter &quot;error&quot; for the catch statement can be any name.</li>
+				 <li>The Try and Catch pair has its limit. For example, if there is an error within the catch block, nothing will happen.</li>
+				 <li>It is mostly used to catch underfined variables.</li>
+			 </ul>
+			
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration and Example. </h2>
+			<p>Here, we conbine Example and Demonstration. The example will create a simple function with an error and wrap it inside a try and catch block. The demonstration will run the code and see what error is reported.			</p>
+			<p>Notice in the demonstration, we log the message to an HTML element using innerHTML instead of console.log().</p>
+			<pre>
+function deerGreeting() {
+ try {
+  var deerGreeting = `Welcome to The
+                      Vegan Deer!`;
+  console.log(deeGreeting);
+ }
+ catch(error){
+  console.log(error);
+ }
+}		 	</pre>
+			<button class="demonstrateButton" onclick="chapter87()">Run the Code</button>
+			<p class="demoP" id="guess87"></p>
+		</div>	
+		
+		<!-- Chapter 88 -->
+	
+	  <h2> Chapter 88 Concepts: Exceptions: Throw.</h2>
+		 <p>The Try and Catch pair is mostly useful to catch underfined variables within the codes. That is usually a programmer's error. </p>
+		 <p>This chapter shows us how to use Throw to catch an error mostly created by the users and throw the try and catch block a message that reports the users' errors. </p>
+		 <div class="darkGreen">
+		   <h3> Syntax			 </h3>
+			 <pre>
+function someCheckFunction(){
+ try{
+  codes to catch users' errors here;
+  if(there is an error){
+   throw &quot;an error message&quot;;
+  }
+ }
+ catch(error){
+  alert(error);
+ }
+} </pre>
+			 <p>Notes to remember:</p>
+			 <ul>
+				 <li>Codes to catch errors can be any codes like checking for correct emails, checking for zipcode digits, or checking for names covered in the previous chapters. It can be any checking function.</li>
+				 <li>There is a Try and Catch pair here, but the catch block will report the message that the Throw statement sents it. </li>
+				 <li>The real code checking for users' error is the code written by the programmers. It's not automatically checked by Javascript.</li>
+			 </ul>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+		  <p>This example will use a checking function to validate an Email the users enter and throw an error message when an error is caught.</p>
+			 <pre>// The HTML form
+
+&lt;form 
+ action=&quot;javascript:void(0)&quot; 
+ onSubmit=&quot;return validateEmail();&quot; &gt;<br>	&lt;label&gt;Enter Email Address.&lt;/label&gt;&lt; 
+ &lt;input type=&quot;text&quot; id=&quot;email&quot; value=&quot;&quot;&gt;<br> &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; &gt;<br>&lt;/form&gt;
+
+// Check for Email Correction
+
+function validateEmail(){
+ var addressIsLegal = true;
+ var eEntered = 
+  document.getElementById(&quot;email&quot;).value;
+  if(eEntered.indexOf(&quot; &quot;)!==-1){
+   throw(&quot;Please enter no spaces.&quot;);
+  }
+  if eEntered.indexOf(&quot;@&quot;)&lt;1 || eEntered
+     .indexOf(&quot;@&quot;)&gt;eEntered.length-5) {
+   addressIsLegal = false;
+  }
+  if((eEntered.indexOf(&quot;.&quot;)-eEntered
+    .indexOf(&quot;@&quot;)&lt;2 ||
+    eEntered.indexOf(&quot;.&quot;) &gt; eEntered
+    .length-3){
+     addressIsLegal = false;
+  }
+  if(addressIsLegal === false){
+   throw(&quot;Please enter a correct email.&quot;);
+  }
+}</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will demonstrate the example above to report an error message.</p>
+			<form action="javascript:void(0)" onSubmit="return chapter88();" >
+				<label>Enter Email Address.</label><br> 
+				<input type="text" id="userInput" value="">
+				<input type="submit" value="Submit" class="demonstrateButton">
+			</form>
+			<p class="demoP" id="guess88"></p>
+		</div>	
+		
+		<!-- Chapter 89 -->
+	
+			 <h2> Chapter 89 Concepts: Handling Events Within Javascript.</h2>
+		 <p>Until now, we have been shown to use inline event handlings. For example we write a function as a value for an attribute like onClick for an HTML element. This chapter shows us to call a function within the Javascript code, not as an inline value for an HTML element.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <pre>
+// An HTML form input field
+
+&lt;input  type=&quot;button&quot; 
+        value=&quot;Click&quot;
+        id=&quot;ID&quot;&gt;
+
+// To handle event in Javascript
+
+var input1 = 
+ document.getElementById(&quot;ID&quot;);
+
+// Handle various events
+
+input1.onclick = someFunction;
+input1.onsubmit = someFunction;		 </pre>
+		   <p>Notes to remember:</p>
+			 <ul>
+				 <li>The syntax above only show the handling of two events, onclick and onsubmit, but we can use this technique to handle more events than just those two..</li>
+				 <li>Notice that the events such as onclick, onsubmit are both in lowercase, not camelCase.</li>
+				 <li>Notice the function someFunction does not have a pair of parentheses following it.</li>
+				 <li>Whether we use inline handling or separate handling, the function codes are the same.</li>
+			 </ul>
+	    </div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>This example creates a popUp windown with a greeting.</p>
+			 <pre>// The HTML block
+
+&lt;p id=&quot;deerGreeting&quot;&gt;&lt;/p&gt;
+&lt;button id=&quot;button1&quot;&gt;
+  Welcome Message 
+&lt;/button&gt;
+
+// Script
+
+var button1 = 
+ document.getElementById(&quot;button1&quot;);
+ button1.onclick = welcomeMessage;
+
+function welcomeMessage() {
+document.getElementById(&quot;deerGreeting&quot;)
+.innerHTML = &quot;Welcome to the Vegan Deer!;
+}</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will use the example above to bring a greeting our Deer.</p>
+			<button class="demonstrateButton" id="chapter89">Deer Greeting</button>
+			<p class="demoP" id="guess89"></p>
+		</div>
+		
+		</main>
+	</div>
+		
+	<footer> Designed by &nbsp;<span class="fontAlmendraDisplay bold">The Vegan Deer </span><br>
+		Homework Help: <a href="https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup">StackOverflow</a><br><br>
+	  <button onclick="window.location.href='http://validator.w3.org/check?uri=referer'">&check; HTML</button>
+	  <button onclick="window.location.href='http://jigsaw.w3.org/css-validator/check/referer'">&check; CSS</button>  
+    </footer>
+
+</body>
+</html>

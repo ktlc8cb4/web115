@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Vegan Deer :: SWTL 10-20</title>
+	<link rel = "stylesheet" type = "text/css" href = "styles/swtl.css" />
+	<link rel = "stylesheet" type = "text/css" href = "styles/swtl_master.css" />
+	<script src="scripts/swtl_chapters_10_20.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Almendra%20Display" rel="stylesheet">		
+		<link href="https://fonts.googleapis.com/css?family=Kite%20One" rel="stylesheet">
+	<!--
+	Name: Kim Le
+		   Assignment: M5B - SWTL JS Chapters 10 - 20 
+		   Course: Web 115 - Web Markup and Scripting
+		   -->    
+</head>
+
+<body>
+	<header> The Vegan Deer <h2 class="rightText"> A place for gentle dining.</h2></header>  
+	<nav> 		
+	  <ul>			
+				<li><a href="http://students.cpcc.edu/~ktlc8cb4/public_html/web115/">Webspace</a></li>
+				<li><a href="https://github.com/ktlc8cb4">GitHub</a></li>
+				<li><a href="https://ktlc8cb4.github.io/">GitHub Website</a></li>
+				<li><a href="https://ktlc8cb4.github.io/web115/">GitHub Pages</a></li>
+				<li><a href="https://www.freecodecamp.org/ktlc8cb4">Freecodecamp</a></li>
+				<li><a href="https://www.codecademy.com/profiles/KimLe33">Codecademy</a></li>
+				<li><a href="https://www.khanacademy.org/profile/kaid_655162339461744285666695/">Khan Academy</a></li>
+				<li><a href="https://jsfiddle.net/user/ktlc8cb4/">JsFiddle</a></li>
+				<li><a href="https://profile.edx.org/u/ktlc8cb4">EdX</a></li>
+				<li><a href="https://blackboard.cpcc.edu/webapps/Bb-wiki-BBLEARN/wikiView?course_id=_976875_1&wiki_id=_18929_1&page_guid=b5f5751732f14958b689e3c2c91814ef">
+						LinkedIn</a></li>					
+				</ul> 	
+</nav> 
+	<div id="wrapper">
+	<main>
+		<h1>Smarter Way To Learn JS</h1>
+	   	<h1> Chapters 10 - 20 </h1>
+		<h2> Chapter 10 Concept: If Statements.</h2>
+		<p> If statements are used to make decisions
+  			based on the conditions given inside the statement.</p>
+		
+		<div class="darkGreen">
+			<h3> The syntax for if statements: </h3>
+			<pre>
+if (some condition) {code to be executed}  			</pre> </div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<pre>
+var x = 4;
+  if ( x &lt; 5) {
+   alert("The number is less than 5);
+  }			</pre>
+		</div>
+		
+		<div class="lightYellow">  
+		<h2> Demonstration </h2>
+		<p>Let us Vegan Deer demonstrate that by giving away free items, if you guess the right 
+			number that is!</p>
+			<p class="demoP" id="guess"></p>
+		<button class="demonstrateButton" onclick="chapter10()" id="change">Guess</button>
+   	
+   		
+ 	
+		
+	</div>	
+		
+		<h2> Chapter 11 Concept: Comparison Operators.</h2>
+		<p> The Comparison Operators are used to compare two things and return a value of true or false. They are usually used to name the condition for an if statement, but they can be used anywhere in the program if needed.</p>
+		
+		<div class="darkGreen">
+			<h3> The Operators </h3>
+			<ul>
+			<li>  === : Equality :compare if two things are equal</li>
+				<li> !== :  Not equal :compare if thwo things are not equal</li>
+				<li>  &lt; : Less than :compare if one is less than another</li>
+				<li>  &gt; : Greater than : compare if one is greater than another</li>
+				<li>  &lt;= : Less than or equal to:compare if one is less than or equal to another</li>
+				<li>  &gt;= : Greater than or equal to:compare if one is greater than or equal to another</li>
+			</ul>
+			<h3> Syntax </h3>
+			<p>We can use these operators to compare numbers, strings, variable, math expressions, or a mixture of these.</p>
+			<pre>
+if (thing to be compared comparison 
+  operator thing to be compared) 
+    {Code to be executed}</pre>
+					
+			</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			
+			<pre>
+var x = 4;
+if ( x &lt; 5) {
+ alert(&quot;The number is less than 5&quot;);
+}			</pre>
+			
+		</div>
+		
+		<div class="lightYellow">  
+		<h2> Demonstration </h2>
+		<p>Using the operator &lt;=, let us Vegan Deer demonstrate that by giving away free items, if you guess the right 
+			number that is! </p>
+			<p class="demoP" id="guess11"></p>
+		<button class="demonstrateButton" onclick="chapter11()" id="change11">Guess</button>
+   	
+   		
+ 	
+		
+  
+	</div>	
+		
+		<h2> Chapter 12 Concept: If/Else and Else If Statements.</h2>
+		<p> The If/Else statement allows the programs to take another path. The Else If statement lets the program tests for another condition when all other condition has failed and allows the program to take another path of execution.</p>
+		
+		<div class="darkGreen">
+			
+			<h3> Syntax</h3>
+			<p> If/Else Stament: </p>
+		  <pre>
+if (condition) {Code to be executed} 
+else {Code to be executed}</pre>
+			<p> Else If Statment: </p>
+			<pre>
+if (condition) {Code to be executed} 
+else if (condition) {Code to be executed}</pre>
+					
+			</div>
+		
+		<div class="darkGreen">
+		  <h3> Example </h3>
+			<p> An If/Else statement: </p>
+			<pre>
+if ( x &lt; 5) {
+alert("The number is less than 5);
+} else {
+alert(&quot;The number is greater than 5&quot;);
+}</pre>
+			<p> An Else If statement: </p>
+			<pre>
+if ( x &lt; 5) {
+  alert("The number is less than 5&quot;);
+} else if (x === 5) {
+  alert(&quot;The number is 5&quot;);
+}</pre>	
+			
+		</div>
+		
+		<div class="lightYellow">  
+		<h2> Demonstration </h2>
+		<p>Using the operator ===, let us Vegan Deer demonstrate that by giving away free items.</p>
+			<p class="demoP" id="guess12"></p>
+		<button class="demonstrateButton" onclick="chapter12()" id="change12">Type Yes or yes!</button>
+    		
+ 		
+	</div>
+		
+		<h2> Chapter 13 Concept: Testing Sets of Conditions.</h2>
+		<p> We can test for more than one condition in one If statement by using the &amp;&amp; and || operators which mean AND and OR respectively.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+		
+		<div class="darkGreen">
+			
+			<h3> Syntax</h3>
+			<p> Using &amp;&amp; operator: Both conditions have to be met for the code to be executed.</p>
+		  <pre>
+if (condition &amp;&amp; second codition) 
+  {Code to be executed} </pre>
+			<p>Using || operator: Only one condition has to be met for the code to be executed.</p>
+			<pre>
+if (condition || second condition) 
+  {Code to be executed}</pre>
+<p>When testing for more than two conditions, parenthesis pairs should be used to give the testing operation a proper order.</p>	
+			<pre>
+if (condition || (second condition &amp;&amp; 
+  third condition)) 
+  {Code to be executed}
+if ((condition || second codition) 
+  &amp;&amp; third condition) 
+  {Code to be executed}</pre>
+			</div>
+		
+		<div class="darkGreen">
+		  <h3> Example </h3>
+			<p>Using the &amp;&amp; operator: </p>
+			<pre>
+if ( (4 &lt; 5) &amp;&amp; (5 === 5)) {
+  alert("They both work!&quot;);
+} </pre>
+			<p> Using the || operators: </p>
+			<pre>
+if ( (4 &gt; 5) || (5 &lt; 6)){
+  alert("Only one is true,&quot;);
+  alert(&quot; but it still works.&quot;); 
+} </pre>	
+			
+		</div>
+		
+		<div class="lightYellow">  
+		<h2> Demonstration </h2>
+		<p>Our conditions for our Deer is that they love broccoli and tomatoes. If you do, you get free stuff!</p>
+			<p class="demoP" id="guess13"></p>
+		<button class="demonstrateButton" onclick="chapter13()" id="change13">What do you love?</button>
+    		
+ 		
+  
+	</div>	
+		
+		<h2> Chapter 14 Concept: If Statements Nested.</h2>
+		<p> An If statement can be nested inside another If statement.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+		
+		<div class="darkGreen">
+			
+			<h3> Syntax</h3>
+			<p>An If statement isinde another If statement.</p>
+		  <pre>
+if (condition){
+	if (condiiont) {Code to be executed}} </pre>
+			<p>All If Else or Else If statement ccan be nested inside another If statement.</p>
+			<pre>
+if (condition) {
+	if (condition) {Code to be executed}
+	else {Code to be execute}}</pre>
+<p>Nesting 3 If statements. Just be careful wth the curly brackets.</p>	
+			<pre>
+if (condition) {
+	if (condition) {
+	  if (condition) {Code to be executed}}}</pre>
+			</div>
+		
+		<div class="lightYellow">
+		  <h3> Example and Demonstration </h3>
+			<p>This nested If statement has 3 nested levels. If the first statement returns false, non of the nested statements is executed.</p>
+			<pre>
+if ( 4 &lt; 5) {
+  if ( 5 &lt; 6) {
+    if ( 7 &lt; 8) {
+      alert("Yes, that's so true!&quot;);
+} else if (9 &lt; 10) {
+    alert(&quot;Yes, that's still true!&quot;); 
+} else {
+   alert(&quot;Nope, everything is false!&quot;); 
+}}}</pre>
+			
+		</div>
+		
+		<h2> Chapter 15 Concept: Arrays.</h2>
+		<p> An Array is a variable that holds a list of values.</p>
+		
+		<div class="darkGreen">
+			
+			<h3> Syntax</h3>
+			<p>An Array of Numbers.</p>
+		  <pre>
+var variableName = [ a number, a number, 
+  a number, ...]; </pre>
+			<p>An Array of Strings.</p>
+			<pre>
+var variableName = [&quot;a string&quot;, 
+  &quot;a string&quot;, &quot;a string&quot;, ...]; </pre>
+<p>An Array of Mixed Data Types.</p>	
+			<pre>
+var variableName = [ &quot;a string&quot;, a number,
+   a variable, an object, ...];</pre>
+<p>To access an array item, use the array index which starts at 0.</p>	
+			<pre>
+arrayName[index number]; </pre>
+<ul>
+<li> The variable names for arrays use the same variable name standards.</li>
+<li> The array automatically gives index numbers to array items.</li>
+</ul>
+
+	  </div>
+		<div class="darkGreen">
+		<h3> Example </h3>
+		<p>An Array of numbers with 3 items.</p>
+		  <pre>
+var deerNum = [ 2, 3, 4]; </pre>
+			<p>An Array of strings with 3 items.</p>
+			<pre>
+var deerName = [&quot;Bambi&quot;, &quot;Symba&quot;, &quot;Nemo&quot;]; </pre>
+<p>An Array of mixed data types.</p>	
+			<pre>
+var deerMix = [ &quot;Bamni&quot;, &quot; is&quot;, 5, 
+  &quot; years old&quot;];</pre>
+<p>To access Symba item in deerName, use the array index 1.</p>	
+			<pre>
+deerName[1]; </pre>	
+			
+		</div>
+		
+		<div class="lightYellow">  
+		<h2> Demonstration </h2>
+			<p>These are our specials today: </p>
+			<ol>
+			<li> Veggie wrap</li>
+			<li> Faux shrimp tempura</li>
+			<li> Tomato mania</li>
+			<li> Grilled cheese sandwich</li>
+			<li> Banana wrap</li>
+			</ol>
+			<p>Please order by picking the number corresonding to the menu item.</p>
+			<p class="demoP" id="guess15"></p>
+		<button class="demonstrateButton" onclick="chapter15()" id="change15">Place Order</button>
+    		
+ 		
+  
+	</div>	
+		
+		<h2> Chapter 16 Concept: Adding and Removing Elements for an Array.</h2>
+		<p> How to add and remove items from an array.</p>
+		
+		<div class="darkGreen">
+			
+			<h3> Syntax</h3>
+			<p>Adding items to an empty array.</p>
+		  <pre>
+var arrayName = []; // declaring an array</pre>
+		  <p>Add 3 string items to an empty array that has been declared.</p>
+			<pre>
+arrayName[0] = &quot;a string&quot;;
+arrayName[1] = &quot;a string&quot;;
+arrayName[1] = &quot;a string&quot;; </pre>
+<p>Add 2 string items to the end of an array that already has items.</p>	
+			<pre>
+arrayName.push(&quot;a string&quot;, &quot;a string&quot;);</pre>
+<p>Remove the last item of an array.</p>	
+			<pre>
+arrayName.pop(); </pre>
+</div>
+		<div class="darkGreen">
+		<h3> Example </h3>
+		<p>Declaring an empty array and add 2 number items.</p>
+		  <pre>
+var deerNum = [];
+deerNum[0] = 2;
+deerNum[1] = 5; </pre>
+			<p>Adding 2 more string items to deerNum.</p>
+			<pre>
+deerNum.push(7, 8); </pre>
+<p>Deleting the last item from deerNum.</p>	
+			<pre>
+deerNum.pop();</pre>
+
+		</div>
+		
+		<div class="lightYellow">  
+		<h2> Demonstration </h2>
+			<p>Your order includes: </p>
+			<ol>
+			<li> Veggie wrap</li>
+			<li> Papaya salad</li>
+			<li> Large Pepsi</li>
+			</ol>
+			<p> Items available for you to add:</p>
+			<ol>
+			<li> Banana bread</li>
+			<li> Sweet potato fries</li>
+			</ol>
+			<p>Would you like to add more items?</p>
+			<p class="demoP" id="guess16"></p>
+		<button class="demonstrateButton" onclick="chapter16()" id="change16">Add items</button>
+    		
+ 		
+  
+	</div>	
+		
+		<h2> Chapter 17 Concept: Removing and Inserting Elements for an Array.</h2>
+		<p> How to remove and insert items for an array.</p>
+		
+		<div class="darkGreen">
+			
+			<h3> Syntax</h3>
+			<p>Remove the first item of an array.</p>
+		  <pre>
+arrayName.shift();</pre>
+		  <p>Add 2 more string items to the beginning of an array. </p>
+			<pre>
+arrayName.unshift(&quot;item&quot;, &quot;item&quot;); </pre>
+<p>Add an item anywhere in an array.</p>	
+			<pre>
+// Define an array to splice
+var arrayName = [&quot;item1&quot;, &quot;item2&quot;, 
+  &quot;item3&quot;, &quot;item4&quot;]; 
+
+// adding item5 without removing any items.
+arrayName.splice(2, 0, &quot;item5&quot;);
+
+/* adding item5 and removing 2 items 
+starting at index 2. */ 
+arrayName.splice(2, 2, &quot;item5&quot;); </pre>
+<p>Remove items without adding in an array.</p>	
+			<pre>
+// removing 2 items staring at index 2. 
+arrayName.splice(2, 2); </pre>
+			<p> Copying consecutive items from one array to store it into another array variable.</p>
+		  <pre>
+/* copy item from index 2 and 3 to a new 
+array variable.*/ 
+var newVariable = arrayName.slice(2, 4); </pre>
+</div>
+		<div class="darkGreen">
+		<h3> Example </h3>
+		<p>Remove the first item of an array.</p>
+		  <pre>
+var deerName = ["Bambi", "Symba", "Nemo"]; // define an array deerName
+deerName.shift();</pre>
+		  <p>Add 2 more string items to the beginning of deerName. </p>
+			<pre>
+deerName.unshift(&quot;Bambi&quot;, &quot;Mickey&quot;); </pre>
+<p>Add an item somewhere in deerName.</p>	
+			<pre>
+// adding &quot;Tom&quot; without removing any items
+deerName.splice(2, 0, &quot;Tom&quot;);
+
+/* adding &quot;Jerry&quot; and removing 2 items 
+starting at index 2*/
+deerName.splice(2, 2, &quot;Jerry&quot;); </pre>
+<p>Remove items from deerName.</p>	
+			<pre>
+// removing 2 items staring at index 2. 
+deerNamName.splice(2, 2); </pre>
+			<p> Copying consecutive items from deerName into another array variable.</p>
+		  <pre>
+var newDeerMember = deerName.slice(2, 4);  
+</pre>
+
+		</div>
+		
+		<div class="lightYellow">  
+		<h2> Demonstration </h2>
+			<p class="demoP" id="guess17">Your order includes:</p>
+			<ol id="newOrder">
+			<li> Veggie wrap</li>
+			<li> Papaya salad</li>
+			<li> Large Pepsi</li>
+			<li> Banana bread</li>
+			<li> Sweet potato fries</li>
+			</ol>
+			<p id="stop">Would you like to remove any items?</p>
+		
+		<button class="demonstrateButton" onclick="chapter17()" id="change17">Remove items</button>
+    		
+ 		
+	</div>
+		
+			<h2> Chapter 18 Concept: For Loops.</h2>
+		<p> A For Loop is used to run something over and over again until a counter reachese its set limit. It allows for codes to repeat without having write many many lines of codes.</p>
+		
+		<div class="darkGreen">
+			
+			<h3> Syntax</h3>
+		  <pre>
+for (numVariable = 0; 
+  numVariable comparison operator 
+  the times the code should run; 
+  numVariable += count value) 
+  {Code to be executed}</pre>
+<p> A few points about For Loop.</p>
+		  <ul>
+		  <li> There should be a counter that sets a limit of the number of times the code should run. </li>
+		  <li> In the code above, numVariable is a variable declared to be the counter.</li>
+		 <li> The counter is usually set at 0 to start the count. But it can be set to any value.</li>
+			<li> Comparison operators are used to set the repetition limit the code should run.</li>
+			<li> The count value is the increment of the numVariable set for the loop.</li>
+		  </ul>
+</div>
+		<div class="darkGreen">
+		<h3> Example </h3>
+		<p>The example below will log &quot;Hello&quot; to the console 5 times.</p>
+		  <pre>
+var i;
+for (i = 0; i &lt; 5; i++){
+console.log(&quot;Hello&quot;); }		</pre>
+		</div>
+		
+		<div class="lightYellow">  
+		<h2> Demonstration </h2>
+			<p class="demoP" id="guess18"></p>
+			<ol id="list18">
+			</ol>
+		
+		<button class="demonstrateButton" onclick="chapter18()" id="change18">Click This Button</button>
+    		
+ 		
+	</div>
+		<h2> Chapter 19 Concept: Problems with For Loops and Ways to Solve Them.</h2>
+		<p>Several other elements are used to work with For Loop for better perfomance when looping through an array. They are Flags, Booleans values, Breaks, and array.length. </p>
+		
+	  <div class="darkGreen">
+			
+			<h3> Syntax</h3>
+			<p>A Flag is a variable defined before the For Loop and gets changed through the loop depending on the path the loop takes. If its original value stays the same, it means it has not been changed which usually means the loop has not found what it needs. </p>
+		  <pre>
+var flagName = set value;
+for (counter requirement) {
+  if (condition is met) { 
+    {Code to be executed;
+    // Changing flagName 
+    flagName = new value; inal
+  } 
+if (flagName = its original set value) {
+  Execute some kind of notification to 
+  the users.}</pre>
+	    <p>A Break is used to stop the loop if the the loop has found its targe but has not reached the end of the counter yet. </p>
+			<pre>var flagName = set value;
+for (counter requirement) {
+  if (condition is met) { 
+    Code to be executed;
+
+// Changing flagName from its original
+   flagName = new value; 
+   break;
+  } 
+if (flagName === its original set value){
+  Execute some kind of notification to 
+  the users.}</pre>
+<p>Booleans values are used to evaluate the condition inside if If Statement inside the For Loop.</p>	
+			<pre>
+for (counter requirement) {
+if (condition) { 
+Code to be executed}</pre>
+<p>array.length is used to as the limit of the For Loop because it is the number of items of the array. The loop does not need to keep repeating itself after it has reached the final item of the array. When using array.length, always usse the &lt; operator.</p>	
+			<pre>for (counter; counter &lt; array.length; 
+  counter++) { 
+Code to be executed}</pre>
+	  </div>
+		<div class="darkGreen">
+		<h3> Example </h3>
+		<p>The example below loops through an array of deerNames to find &quot;John&quot;. It includes all the checking concepts described in this chapter.</p>
+		  <pre>var deerName = [&quot;Jane&quot;, &quot;Christy&quot;, &quot;Bob&quot;, 
+  &quot;John&quot;, &quot;Elaine&quot;];
+var deerMatch = false;
+var i;
+for (i = 0; i &lt; deerName.length; i++) {
+  if (deerName[i] === &quot;John&quot;) { 
+  console.log(&quot;Hey, we found John!&quot;);
+  deerMatch = true; 
+  break;
+  } 
+if (deerMatch === false) {
+console.log(&quot;Sorry, John is not found.&quot;);}</pre>
+		  <p>&nbsp;</p>
+	  </div>
+		
+		<div class="lightYellow">  
+		<h2> Demonstration </h2>
+			<p class="demoP" id="guess19">Are you one of the members of The Vegan Deer?</p>
+		
+		<button class="demonstrateButton" onclick="chapter19()" id="change19">Find Out</button>
+    		
+ 		
+  
+	</div>
+		<h2> Chapter 20 Concept: Nested For Loops. </h2>
+		<p> For Loops can be nested inside another For Loops as many times as infimity. The inner loop will run its entire cycle as many times as the outer loops dictates.</p>
+		
+	  <div class="darkGreen">
+			
+			<h3> Syntax</h3>
+		<p>The syntax below looks simple, but it is nothing as simple as it looks.</p>
+	    <pre>
+for (counter) {
+for (counter) {Code to be executed}}</pre>
+</div>
+	  <div class="darkGreen">
+		<h3> Example </h3>
+		<p>The example below will print out 25 lines of &quot;Lunch is served&quot;.</p>
+		  <pre>
+var i;
+var j;
+for (i = 0; i &lt; 5; i++) {
+  for (j = 0; j &lt; 5; j++) {
+    console.log(&quot;Lunch is served.&quot;);} }		</pre>
+	  </div>
+		
+		<div class="lightYellow">  
+		<h2> Demonstration </h2>
+			<p> Using this code sample, we will remind you that &quot;Lunch is served!&quot; 9 times.</p>
+			
+			<pre>
+var i;
+var j;
+for (i = 0; i &lt; 3; i++) {
+  for (j = 0; j &lt; 3; j++) {
+    console.log(&quot;Lunch is served.&quot;);} }		</pre>
+<p id="guess20"></p>
+					
+		<button class="demonstrateButton" onclick="chapter20()" id="change20">Lunch Time!</button>
+    		
+ 		
+  
+	</div>
+
+
+	</main>
+	</div>
+	<footer> Designed by &nbsp;<span class="fontAlmendraDisplay bold">The Vegan Deer </span><br><br> 
+	  <button onclick="window.location.href='http://validator.w3.org/check?uri=referer'">&check; HTML</button>
+	  <button onclick="window.location.href='http://jigsaw.w3.org/css-validator/check/referer'">&check; CSS</button>
+
+  
+    </footer>
+</body>
+</html>

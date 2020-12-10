@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Vegan Deer :: SWTL 1-9</title>
+	<link rel = "stylesheet" type = "text/css" href = "styles/swtl_master.css" />
+	<link rel = "stylesheet" type = "text/css" href = "styles/swtl.css" />
+	<script src="scripts/swtl_chapters_1_9.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Almendra%20Display" rel="stylesheet">		
+		<link href="https://fonts.googleapis.com/css?family=Kite%20One" rel="stylesheet">
+	<!--
+	Name: Kim Le
+		   Assignment: M4B - SWTL JS Chapters 1 - 9 
+		   Course: Web 115 - Web Markup and Scripting
+		   -->
+
+    
+    
+</head>
+
+
+
+<body>
+
+
+<header> The Vegan Deer <h2 class="rightText"> A place for gentle dining.</h2></header>  
+			<nav> 		
+				<ul>			
+				<li><a href="http://students.cpcc.edu/~ktlc8cb4/public_html/web115/">Webspace</a></li>
+				<li><a href="https://github.com/ktlc8cb4">GitHub</a></li>
+				<li><a href="https://ktlc8cb4.github.io/">GitHub Website</a></li>
+				<li><a href="https://ktlc8cb4.github.io/web115/">GitHub Pages</a></li>
+				<li><a href="https://www.freecodecamp.org/ktlc8cb4">Freecodecamp</a></li>
+				<li><a href="https://www.codecademy.com/profiles/KimLe33">Codecademy</a></li>
+				<li><a href="https://www.khanacademy.org/profile/kaid_655162339461744285666695/">Khan Academy</a></li>
+				<li><a href="https://jsfiddle.net/user/ktlc8cb4/">JsFiddle</a></li>
+				<li><a href="https://profile.edx.org/u/ktlc8cb4">EdX</a></li>
+				<li><a href="https://blackboard.cpcc.edu/webapps/Bb-wiki-BBLEARN/wikiView?course_id=_976875_1&wiki_id=_18929_1&page_guid=b5f5751732f14958b689e3c2c91814ef">
+						LinkedIn</a></li>					
+				</ul> 	
+			</nav>  
+     
+	<div id="wrapper">
+   <main>  
+	   <h1>Smarter Way To Learn JS</h1>
+	   <h1> Chapters 1 - 9 </h1>
+	   
+	   <h2> Chapter 1 Concept: Using the alert() Method.</h2>
+	   <p> We can use alert method to display a window box with a message. As the parameters for this method, we can pass in a string, a variable, a number, a math operation, or a mix of numbers, math operations, strings and variables.</p>
+	   
+	   <div class="darkGreen">	
+		   <h3> Syntax</h3>
+		   <p>For strings: </p>
+		   <pre>
+alert(place the message here inside 
+  quotation marks);
+</pre>
+		   <p>For numbers: </p>
+		   <pre>
+alert(place the number here);
+</pre>
+		   <p>For math expressions: </p>
+		   <pre>
+alert(place math expressions here);
+</pre>
+		   <p>For a variable: </p>
+		   <pre>
+alert(variable names);
+</pre>
+		   <p>For a mix of data types: </p>
+		   <pre>
+alert(data type + data type);
+</pre>
+	   </div>
+	   
+	   <div class="darkGreen">
+		   <h3> Example</h3>
+		   <pre>
+alert("Hello my Deer! We are eating 
+  banana splits today!");
+</pre>
+	  </div>
+	   
+	   <div class="lightYellow">   
+		   <h3>Demonstration</h3>
+		   <p>Click on the button to see what we have for lunch today, Deer.</p>
+		<button class="demonstrateButton" onclick="chapter1()">Lunch</button>
+		
+	   </div>
+	   
+	   <h2> Chapter 2 Concept: Variables for Strings.</h2>
+	   <p> We can declare a variable and give it a name. This variable is to hold some information. This chapter focuses on strings. Key concept is strings have to be enclosed in a either double or single quotation marks.</p>
+	   <div class="darkGreen">
+	   <h3> Syntax</h3>
+       <pre>
+var newDeer = "Deer";</pre>
+		   <p> - var is the keyword to declare a variable.</p>
+		   <p> - newDeer is the name of the variable.</p>
+		   <p> - "Deer" is the value for the variable named newString</p>
+	   </div>
+	   <div class="darkGreen">   
+		   <h3>Example</h3>
+		   <p> Declare a variable named newDeer and give it a value of "Kim".</p>
+		   <pre>
+var newDeer = "Kim";</pre>
+		   <p> Reassign the value of newDeer by changing the value to "Mark".</p>			  		  
+			<pre>
+newDeer = "Mark";</pre>
+			   
+	   </div> 
+	   <div class="lightYellow">   
+		   <h3>Demonstration</h3>
+		   <p> Let's change a name.</p>
+		    <button class="demonstrateButton" onclick="chapter2()">Try it</button>
+		   <p class="demoP" id="guess2"></p>
+		   <p class="demoP" id="guess21"></p>	  
+			   
+	   </div> <!-- ends chap2 -->
+	   
+	   <h2> Chapter 3 Concept: Variables for Numbers.</h2>
+	   <p> Variables can also hold values as numbers besides strings. Numbers are not enclosed in quotation marks. </p>
+	   <div class="darkGreen">
+		   <h3> Syntax </h3>
+		   <pre>
+var newDeerNum = place the number here;</pre>
+		   <p> - var is the keyword to declare a variable.</p>
+		   <p> - newDeerNum is the name of the variable.</p>
+		   <p> - the number intended to be the value goes on the right of the equal sign.</p>
+	   
+	   </div>
+	   
+     <div class="darkGreen">   
+	   <h3>Example</h3>
+		 <p> Declare a variable named newDeerNum and assign it a value of 2.</p>
+	     <pre>
+var newDeerNum = 2;</pre>
+		 <p>Changing the value of newDeerNum by giving it a result of a math expression.</p>
+		   <pre>
+newDeerNum = 3 + 2;</pre>
+		   
+	   </div>
+	   <div class="lightYellow">   
+	   <h3>Demonstration</h3>
+		 <p> Let's change a number.</p>
+	     
+		  <button class="demonstrateButton" onclick="chapter3()">Try it</button>
+		   <p class="demoP" id="guess3"></p>
+		   <p class="demoP" id="guess31"></p>	  
+	   </div>
+	   
+	   
+	   
+	    <h2> Chapter 4 Concept: Legal and Illegal Variable Names.</h2>
+	   <p> The key concept in this chapter talks about the standard of naming variables. </p>
+	   <div class="darkGreen">
+		   <h2> Concepts </h2>
+		   <ul>
+		   <li> Variable names cannot be a javascript keywords unless they are couple with some other words.</li>
+			<li>A variable name can only contain dollar sign, underscore, letters, and numbers. However, numbers cannot be the start of a variable name. </li>
+		   <li>The standard for naming variables is using camelCase which means the first letter of the first word is lower case, and all the first letters of the subsequent words are capitalized.</li>
+		   </ul>		 	   
+	   </div>
+	   
+     <div class="lightYellow">   
+	   <h3>Example and Demonstration</h3>
+	     
+		     <pre>
+var abstract = 2;</pre>
+		   <p> Illegal: <strong>abstrac</strong>t is JS keyword.</p>
+			  
+		   <pre>
+var _$Hello1 = 3; </pre>
+	   <p> Legal: the undescore, dollar sign, letters, and numbers are all legal, and the variable doesn't start with a number.</p>
+
+			 <pre>
+var workHours = 3; </pre>
+	   <p>In Standard: workHours uses camelCase convention.</p>	   
+	   </div>
+	   
+	   <h2> Chapter 5 Concept: Familiar Math Operators.</h2>
+	   <p> Javascript uses the standard math operators for addition, subtraction, multiplication, and division, with the symbol <strong>%</strong> called <strong>modulus</strong> to calculate the remainder of a division.</p>
+	   <div class="darkGreen">
+		   <h2>Syntax</h2>
+		   <p> Addition: </p>
+		   <pre>
+var variableName = a number + another 
+  number;</pre>
+		   <p> Subtraction: </p>
+		   <pre>
+var varibleName = a number - another 
+  number;</pre>
+		   <p> Multiplication: </p>
+		   <pre>
+var variableName = a number * another 
+  number;</pre>
+		   <p> Division: </p>
+		   <pre>
+var variableName = a number / another 
+  number;</pre>
+		   <p> Modulus: </p>
+		   <pre>
+var variableName = a number % another 
+  number; </pre>	   
+	   </div>
+	   
+     <div class="darkGreen">   
+	   <h3>Examples</h3>
+
+<pre>
+var moreDeer = 2 + 2;
+var lessDeer = 2 - 2;
+var evenMoreDeer = 2 * 2;
+var evenLessDeer = 2 / 2;
+var deerRemaining = 2 % 2;</pre>
+	   </div>
+	   <div class="lightYellow">   
+	   <h3>Demonstration</h3>
+		 <p> What is 10 % 4?</p>
+		  <button class="demonstrateButton" onclick="chapter5()">Find out</button>
+		   <p class="demoP" id="guess5"></p>
+	   </div>
+	  
+	   <h2> Chapter 6 Concept: Unfamiliar Math Operators.</h2>
+	   <p> Javascript uses the symbol ++ or -- next to a number to add or subtract one from that number. Placing these symbols before the number will result differently from placing it behind the number. </p>
+	   <div class="darkGreen">
+		   <h3> Syntax </h3>
+		   <p> With this syntax, only deerNum increases or decreases by 1.</p>
+		   <pre>
+var deerNum = a number;
+var newDeerNum = deerNum++;
+var newDeerNum = deerNum--;</pre>
+		   <p> With this syntax, both deerNum and newDeerNum increases or decreases by 1.</p>
+		   <pre>
+var deerNum = a number;
+var newDeerNumDeer = ++newDeerNum
+var newDeerNum = --newDeerNum</pre>
+	   
+	   </div>
+	   
+     <div class="darkGreen">   
+	   <h3>Example</h3>
+	     <pre>
+var deerNum = 2 ;
+var newDeerNum = deerNum++;
+console.log(newDeerNum);</pre>
+<p> The answer is 2. Because the ++ is placed behind <strong>deerNum</strong>, <strong>newDeerNum</strong> does not benefit from the increment. Only <strong>deerNum</strong> benefits from it.</p>
+		   <pre>
+var deerNum = 2 ;
+var newDeerNum = ++deerNum;
+console.log(newDeerNum);</pre>
+	
+<p> The answer is 3. Because the ++ is placed in front of <strong>deerNum</strong>, both <strong>newDeerNum</strong> and <strong>deerNum</strong> will increase to 3. The concept works the same way with -- .</p>
+		  
+	
+	   </div>
+	    <div class="lightYellow">   
+		   <h3>Demonstration</h3>
+		   <p> Let's guess the results for the newDeerNum in the code blocks below.</p>
+			<pre>
+var deerNum = 2 ;
+var newDeerNum = ++deerNum;
+</pre>
+			<button class="demonstrateButton" onclick="chapter6()">Answer</button>
+			<p class="demoP" id="guess6"></p>
+			<pre>
+var deerNum = 2 ;
+var newDeerNum = deerNum++;
+</pre>
+		    
+		   <button class="demonstrateButton" onclick="chapter6_1()">Answer</button>
+		   <p class="demoP" id="guess6_1"></p>	  
+			   
+	   </div> 
+	
+	   <h2> Chapter 7 Concept: The Order of Math Expressions.</h2>
+	   <p> Javascript follows the the standard order of the math expressions - multiplication and division are done before addition and subtraction. To eliminate ambiguity, JS uses parentheses to define the order that an expression should follow.</p>
+	   <div class="darkGreen">
+		   <h3> Syntax </h3>
+		   <p> No quotation mark enclosure around any block to allow the flow of normal standard operation. </p>
+		   <pre>
+var deerNum = a number + a number / 
+  another number;</pre>
+		   <p> Enclose the block to be executed first inside a set of parentheses. </p>
+		   <pre>
+var deerNum = (a number + a number) / 
+  another number;</pre>
+	   
+	   
+	   </div>
+	   
+     <div class="darkGreen">   
+	   <h3>Example</h3>
+	     <pre>
+var deerNum = 2 + 2 * 3;</pre>
+		   <p> The answer is 8. Multiplication is done before  addition.</p>
+			 <pre>
+var deerNum = (2 + 2) * 3;</pre>
+		   <p> The answer is 12. Addition is done first because it is enclosed inside a pair of parentheses. Multiplication is the second operation.</p>		   
+	     
+	   </div>
+	   <div class="lightYellow">   
+	   <h3>Demonstration</h3>
+		 <p> Let's evaluate the expression below.</p>
+		    <pre>
+var deerNum = (2 + 2) * 3;</pre>
+		  <button class="demonstrateButton" onclick="chapter7()">Answer</button>
+		   <p class="demoP" id="guess7"></p>
+	   </div>
+	
+	   <h2> Chapter 8 Concept: Concatenating Strings.</h2>
+	   <p> Strings can be concatenated or added together to make a meaningful message. However, there are a few rules that need to be followed for the strings to display correctly.</p>
+	  <div class="darkGreen">
+		  <h3> Syntax </h3>
+		  
+		  <pre>
+var newDeer = "a string" + 
+  "another string" + a variable; </pre>
+		  <p> - Strings can be concatenated by another string or a variable. Strings are enclosed by quotation marks whereas variables are not.</p>
+		  <p> - Add spaces inside the quotation marks to give the string spaces where needed.</p>
+	   
+	   </div>
+     <div class="lightYellow">   
+	   <h3>Demonstration</h3>
+	     <pre>
+alert("Hello" + "my Deer!");</pre>
+		   <p> Notice there is no space after the word "Hello". The result will be - Hellomy Dear!<button class="demonstrateButton" onclick="example1()">Try it</button></p>
+			 
+		
+			 
+			 <pre>
+alert("Hello " + "my Deer!");</pre>
+		   <p> Notice there is a space after the word "Hello". The result will be - Hello my Dear!<button class="demonstrateButton" onclick="example2()">Try it</button></p>
+			 
+		
+			 
+			 <pre>
+alert("We have " + 2 + 2 + 
+  " Vegan Deer here.");</pre>
+		   <p> Mixing numbers and strings will result in a string. Javascript will successfully make 2 + 2 = 22. The result will be - We  have 22 Vegan Deer here.<button class="demonstrateButton" onclick="example3()">Try it</button></p>
+			 
+		
+		
+	
+	   </div>
+	   
+	   <h2> Chapter 9 Concept: Using the prompt() method. </h2>
+	   <p> Like the alert() method, the promp() method will show a popup window displaying a message. The difference is the prompt() method asks for user input and saves the information to a variable. Inputs from the prompt() only result in strings even if a number is the input. This method allows for a default value to be stored in the designated variable in case the user doesn't give an input.</p>
+	   <div class="darkGreen">
+		   <h3> Syntax </h3>
+		   <p> The message displayed in the prompt box could be a string, a number, the content of a variable, or a misture of all those types.</p>
+		   <pre>
+var variableName = prompt("a string of 
+  message.");
+var variableName = prompt(a variable);
+var variableName = prompt(a number + a 
+  variable + "a string");</pre>
+		   <p> The prompt() method allows the option of using a default value if no input is received.</p>
+		   <pre>
+var variableName = prompt("a string of message", "default value");
+</pre>
+	   
+	   </div>
+	   <div class="darkGreen">
+		   <h3> Example </h3>
+		   <p> This variable newDeer will receive the value of whatever the  user puts in as their name.</p>
+		   <pre>
+var newDeer = prompt("Please enter your 
+  name, my Deer!");</pre>
+	   
+	   
+	   </div>
+	    <div class="lightYellow">   
+		   <h3>Demonstration</h3>
+		   <p>Let us Deer demonstrate that whatever number you type in is the number of free banana splits you get. But if you don't type in a number, we will still give you 1 because you are our Deer.</p>
+			<p id="freeBanana"></p><button class="demonstrateButton" onclick="chapter9()">Free Banana Splits</button></div>
+		
+	
+        
+     	
+	</main>
+    </div>
+   <footer> Designed by &nbsp;<span class="fontAlmendraDisplay bold">The Vegan Deer </span><br><br> 
+<button onclick="window.location.href='http://validator.w3.org/check?uri=referer'">&check; HTML</button>
+<button onclick="window.location.href='http://jigsaw.w3.org/css-validator/check/referer'">&check; CSS</button>
+
+  
+  </footer>
+	
+
+</body>
+
+</html>

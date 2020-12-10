@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>The Vegan Deer :: Responsive Web Design: Survey</title>
+		<link rel = "stylesheet" type = "text/css" href = "styles/survey.css" />
+		<link href="https://fonts.googleapis.com/css?family=Almendra%20Display" rel="stylesheet">		
+		<link href="https://fonts.googleapis.com/css?family=Kite%20One" rel="stylesheet">
+		
+		<!--
+		Name: Kim Le
+			   Assignment: Responsive Web Design - Survey
+			   Course: Web 115 - Web Markup and Scripting
+			   -->       
+	</head>
+
+	<body>
+
+		<header> The Vegan Deer <h2 class="rightText"> A place for gentle dining.</h2></header> 
+		
+		<nav> 		
+			<ul>			
+				<li><a href="http://students.cpcc.edu/~ktlc8cb4/public_html/web115/">Webspace</a></li>
+				<li><a href="https://github.com/ktlc8cb4">GitHub</a></li>
+				<li><a href="https://github.com/ktlc8cb4/github.io">GitHub Website</a></li>
+				<li><a href="https://ktlc8cb4.github.io/web210/">GitHub Pages</a></li>
+				<li><a href="https://www.freecodecamp.org/ktlc8cb4">Freecodecamp</a></li>
+				<li><a href="https://www.codecademy.com/profiles/KimLe33">Codecademy</a></li>
+				<li><a href="https://www.khanacademy.org/profile/kaid_655162339461744285666695/">Khan Academy</a></li>
+				<li><a href="https://jsfiddle.net/user/ktlc8cb4/">JsFiddle</a></li>
+				<li><a href="https://profile.edx.org/u/ktlc8cb4">EdX</a></li>
+				<li><a href="https://blackboard.cpcc.edu/webapps/Bb-wiki-BBLEARN/wikiView?course_id=_976875_1&wiki_id=_18929_1&page_guid=b5f5751732f14958b689e3c2c91814ef">
+							LinkedIn</a></li>					
+			</ul> 	
+		</nav> 
+		
+		<div id="main">
+
+			<h1 id="title">Responsive Web Design: Survey</h1> 
+			<p id="description">The Vegan Deer strives to bring you the best dining experience possible. We would like to conduct a survey to find out what your favorite ingredients are, so we can better serve you. Please take a moment to fill out this survey to let us know what items we should be stocking out kitchen with. Thank you for your time and suggestions. </p>
+			
+			<div id="formdiv">
+
+				<form id="survey-form">
+					
+					<h3>Please enter your information:</h3>
+
+					<label for="name" id="name-label" >Please enter your name</label><br>
+					<input type="text" id="name" placeholder="Name"><br>
+
+					<label for="email" id="email-label">Please enter your email address</label><br>
+					<input type="email" id="email" placeholder="Email"><br>
+
+					<label for="number-label">Please enter your age</label><br>
+					<input type="number" id="number-label" min="1" max="200" placeholder="Age"><br>
+
+					<h3>Please select your favorite vegetable</h3>
+
+					<select name="favoritevegetable" id="favoritevegetable">
+						<option value="Broccoli">Broccoli</option>
+						<option value="Tomato">Tomato</option>
+						<option value="Cabbage">Cabbage</option>
+						<option value="Potato">Potato</option>
+					</select><br>
+
+					<h3>Please select your favorite cheese</h3>
+					<input type="radio" id="cheddar" name="favoritecheese" value="cheddar">
+					<label for="cheddar">Cheddar</label><br>
+					<input type="radio" id="mozzarella" name="favoritecheese" value="mozzarella">
+					<label for="mozzarella">Mozzarella</label><br>
+					<input type="radio" id="provolone" name="favoritecheese" value="provolone">
+					<label for="provolone">Provolone</label><br>
+					<input type="radio" id="othercheese" name="favoritecheese" value="other">
+					<label for="othercheese">Other</label>
+
+					<h3>Please select your favorite dressings</h3>
+					<input type="checkbox" id="dressing1" name="dressing1" value="ranch">
+					<label for="dressing1">Ranch</label><br>
+					<input type="checkbox" id="dressing2" name="dressing2" value="french">
+					<label for="dressing2">French</label><br>
+					<input type="checkbox" id="dressing3" name="dressing3" value="thousandisland">
+					<label for="dressing3">Thousand Island</label><br>
+					<input type="checkbox" id="otherdressing" name="otherdressing" value="thousandisland">
+					<label for="dressing3">Other</label><br>
+					
+					<h3>Please enter any suggestions or comments in the box below</h3>
+					<label for="deercomment">Comments/Suggestions:</label><br>
+					<textarea id="deercomment" name="deercomment" rows="5" cols="50">
+					</textarea><br>
+					
+					<button id="submit">Submit</button>
+				</form>
+			</div>
+			
+	   </div>
+
+	   <footer> 
+			Designed by &nbsp;<span class="fontAlmendraDisplay bold">The Vegan Deer </span><br><br> 
+			<button onclick="window.location.href='http://validator.w3.org/check?uri=referer'">&check; HTML</button>
+			<button onclick="window.location.href='http://jigsaw.w3.org/css-validator/check/referer'">&check; CSS</button>
+	  </footer>	
+
+	</body>
+
+</html>

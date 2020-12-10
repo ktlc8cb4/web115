@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Vegan Deer :: SWTL 31-40</title>
+	<link rel = "stylesheet" type = "text/css" href = "styles/swtl.css" />
+	<link rel = "stylesheet" type = "text/css" href = "styles/swtl_master.css" />
+	<script src="scripts/swtl_chapters_31_40.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Almendra%20Display" rel="stylesheet">		
+		<link href="https://fonts.googleapis.com/css?family=Kite%20One" rel="stylesheet">
+	<!--
+	Name: Kim Le
+		   Assignment: M7B - SWTL JS Chapters 31 - 40 
+		   Course: Web 115 - Web Markup and Scripting
+		   -->    
+</head>
+
+<body>
+	<header> The Vegan Deer <h2 class="rightText"> A place for gentle dining.</h2></header>  
+	<nav> 		
+	  <ul>			
+				<li><a href="http://students.cpcc.edu/~ktlc8cb4/public_html/web115/">Webspace</a></li>
+				<li><a href="https://github.com/ktlc8cb4">GitHub</a></li>
+				<li><a href="https://ktlc8cb4.github.io/">GitHub Website</a></li>
+				<li><a href="https://ktlc8cb4.github.io/web115/">GitHub Pages</a></li>
+				<li><a href="https://www.freecodecamp.org/ktlc8cb4">Freecodecamp</a></li>
+				<li><a href="https://www.codecademy.com/profiles/KimLe33">Codecademy</a></li>
+				<li><a href="https://www.khanacademy.org/profile/kaid_655162339461744285666695/">Khan Academy</a></li>
+				<li><a href="https://jsfiddle.net/user/ktlc8cb4/">JsFiddle</a></li>
+				<li><a href="https://profile.edx.org/u/ktlc8cb4">EdX</a></li>
+				<li><a href="https://blackboard.cpcc.edu/webapps/Bb-wiki-BBLEARN/wikiView?course_id=_976875_1&wiki_id=_18929_1&page_guid=b5f5751732f14958b689e3c2c91814ef">
+						LinkedIn</a></li>					
+				</ul> 	
+	</nav> 
+	
+	<div id="wrapper">
+	<main>
+		
+		<h1>Smarter Way To Learn JS</h1>
+	   	<h1> Chapters 31 - 40 </h1>
+	
+		<!-- Chapter 31 -->
+		
+		<h2> Chapter 31 Concepts: Getting the Current Date and Time.</h2>
+		 <p>Using Date() to create a new Date object.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax</h3>
+			 <p>Creating a new Date object.</p>
+			 <pre>
+var someDate = new Date();			 </pre>
+			 <p>A few points to remember:</p>
+			 <ul>
+			 <li>Date objects are not strings, so you cannot use the methods for strings.</li>
+			 <li> Date objects rely on the computer set Date and Time. If the Date and Time on the computer has not been set correctly, the Date object will also give an accurate value.</li></ul></div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>Creating a Date object.</p>
+			 <pre>
+var deerDate = new Date();			 		</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>What time is it, Deer?</p>			
+			<button class="demonstrateButton" onclick="chapter31()">Deer Time</button>
+			<p class="demoP" id="guess31"></p>
+		</div>
+		
+		<!-- Chapter 32 -->
+	
+			 <h2> Chapter 32 Concepts: Extracting Parts of the Date and Time.</h2>
+		 <p>The Date() object has several important methods to extract different pieces of information.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax</h3>
+			 <p>Using one of these several methods to show the syntax. All of the methods follow the same syntax.</p>
+			 <pre>
+var someDate = new Date();
+var someDay = someDate.getDay();			 </pre>
+			 <p>These are the highlighted methods.</p>
+			 <ul>
+				 <li>getDay() - Get the day from the Date object.</li>
+				 <li>getMonth() -Get the month from the Date object.</li>
+				 <li>getDate() - Get the date from the Date object.</li>
+				 <li>getFullYear() - Get the year from the Date object.</li>
+				 <li>getHours() - Get the hour from the Date object. The hour is in military time.</li>
+				 <li>getMinutes() - Get the minute from the Date object.</li>
+				 <li>getSeconds() - Get the second from the Date object.</li>
+				 <li>getMillisecond() - Get the millisecond from the Date object.</li>
+				 <li>getTime() - Get milliseconds since midnight, January 1, 1970.</li>
+			 </ul>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>The example shows only one method since all the other methods follow the same syntax.</p>
+			 <pre>
+var deerDate = new Date();
+var deerHour = deerDate.getHours();			 	</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We might be Deer, but we keep time, too.</p>		
+			<button class="demonstrateButton" onclick="chapter32()">Deer Clock</button>
+			<p class="demoP" id="guess32"></p>
+		</div>	
+	
+		<!-- Chapter 33 -->
+		
+	  <h2> Chapter 33 Concepts: Specifying a Date and Time.</h2>
+		 <p>We can specify the date and time when we create a new Date object.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax</h3>
+			 <p>To specify a specific date and time, put the specific values inside the parenetheses.</p>
+			 <pre>
+var someDate = 
+  new Date(&quot;MonthDate,Year&quot;);		</pre>
+	    </div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>Let's set a date for our Deer Party.</p>
+			 <pre>
+var deerPartyDate = 
+  new Date(&quot;December10,2020&quot;);			 </pre>
+			
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>The Vegan Deer is celebrating our 2 month birthday party. Come join us.</p>			
+			<button class="demonstrateButton" onclick="chapter33()">Deer Party Date</button>
+		  <p class="demoP" id="guess33"></p>
+		</div>	
+	
+		<!-- Chapter 34 --> 
+		
+			 <h2> Chapter 34 Concepts: Changing Elements of a Date Object.</h2>
+		 <p>Using the set methods to change parts of a Date object.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax</h3>
+			 <p>Like the get methods, there are a few important set methods to set elements within a Date object. We will use only one of these methods to show syntax since all the set methods follow the same syntax.</p>
+			 <pre>
+var someDate = new Date();
+var setNewDate = setDate(date to set);			 </pre>
+			 <p>These are the highlighted set methods:</p>
+			 <ul>
+			     <li>setFullYear() - Set the year to the Date object.</li>
+			     <li>setMonth() - Set the month to the Date object.</li>
+			     <li>setDate() - Set the date to the Date object.</li>
+			     <li>setHours() - Set the hour to the Date object.</li>
+			     <li>setMinutes() - Set the minute to the Date object.</li>
+			     <li>setSeconds() - Set the second to the Date object.</li>
+				 <li>setMilliseconds() - Set milliseconds past the second of the Date object.</li>
+			 </ul>
+			 
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+		  <p>Let's set a time for our Deer Birthday Party. All set methods follow the same syntax.</p>
+			 <pre>
+var deerBirthday = 
+  new Date(&quot;October30,2020&quot;);
+var birthdayTime = 
+  deerBirthday.setHours(18);		 		</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>Join us tonight to celebrate our Deer Birthday Party.</p>			
+			<button class="demonstrateButton" onclick="chapter34()">Party Time</button>
+			<p class="demoP" id="guess34"></p>
+		</div>
+		
+		<!-- Chapter 35 -->
+	
+			 <h2> Chapter 35 Concepts: Functions.</h2>
+		 <p>A function is a block of code that does some specific task and can be reused when that task is needed to be done again.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax</h3>
+		   <p>The keyword 'function' is used to declare a function. The name for functions also follow the camelCase standard.</p>
+			 <pre>
+function someFunction() {
+  Code to be executed}		 		</pre>
+	    </div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>This function can be used to print something.</p>
+			 <pre>
+function printDeerName() {
+  console.log(&quot;Mark&quot;);
+{		</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>Join us Vegan Deer and see your name printed out.</p>		
+			<button class="demonstrateButton" onclick="chapter35()">Join Us</button>
+			<p class="demoP" id="guess35"></p>
+		</div>
+		
+		<!-- Chapter 36 -->
+	
+			 <h2> Chapter 36 Concepts: Passing Data to Functions.</h2>
+		 <p>A function can be set up to allow users to give it some data when it is called.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax</h3>
+			 <pre>
+function someFunction (parameter, 
+  parameter, parameter) {
+    Code to be executed 
+}			 </pre>
+			 <p>Points to remember:</p>
+			 <ul>
+			 <li>The parameters inside the parentheses are the placeholders for the users to pass data into. </li>
+				 <li>The data passed into the function will follow the order of the parameters set in the function. </li>
+				 <li>There is no limit to the number of parameters that can be set for a function.</li>
+				 <li>The data passed into these parameters are called arguments.		</li>
+				 <li>The names you give the parameters automatically become variables for that functions.</li>
+			 </ul>
+	    </div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>A example of a function that takes two parameters.</p>
+			 <pre>
+function deerMember(name, age){
+  console.log(name + &quot; &quot; + age + &quot;.&quot;);
+}
+
+//call the function and pass arguments
+deerMember(&quot;Mark&quot;, 23);			 		</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>Let's add some Deer member to our Deer list.</p>			
+			<button class="demonstrateButton" onclick="chapter36()" id="change36">Add Deer Member</button>
+			<p class="demoP" id="guess36"></p>
+			<ol id="list36"></ol>
+		</div>
+		
+		<!-- Chapter 37 -->
+	
+			 <h2> Chapter 37 Concepts: Functions Passing Data Back to the Calling Code.</h2>
+		 <p>A function can return a value to the code that calls it.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax</h3>
+			 <p>With a return statement, a function can return a value to the code that calls it. However, each function can only return one value.</p>
+			 <pre>
+function someFunction() {
+  Code to be executed;
+  return statement;
+{		</pre>
+	    </div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>Define a function with a return value.</p>
+			 <pre>
+function addDeer() {
+  return 2 + 2;
+}
+
+// call the function to get the value
+var deerNum = addDeer();		</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>Let's use the function above, then pass it two numeric arguments to see the value returned.</p>
+			<button class="demonstrateButton" onclick="chapter37()">Enter Numbers</button>
+			<p class="demoP" id="guess37"></p>
+		</div>	
+	
+		<!-- Chapter 38 -->
+			 <h2> Chapter 38 Concepts: Local Vs Global Variables.</h2>
+		 <p>A variable declared inside the main code is a global variable and known globally by all functions in that code. A variable declared inside a function is a local variable and is known only inside that function.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax</h3>
+			 <p>Defining a global variable. The function that follows after the globalVar will access the globalVar successfully.</p>
+			 <pre>
+var globalVar = value;
+function somefunction() {
+  globalVar = someValue;
+}			 			 </pre>
+			 <p>Defining a local variable inside a function. The function that follows it cannot access the variable inside the previous function successfully.</p>
+			 <pre>
+function someFunction() {
+  var localVar = value;
+}
+
+// this function cannot access localVar.
+function otherFunction() {
+ localVar = value;
+{			 		</pre>
+	    </div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>Defining a global variable. Note it is declared in the main code but outside of a function.</p>
+			 <pre>
+var deerNum = 10;
+function addDeerNum() {
+ deerNum = 10 + 10;
+}			 </pre>
+			 <p>Defining a local variable. Note it is accessed inside the function it is declared in successfully, but other functions will not be able to access it.			 </p>
+			 <pre>
+function addDeerNum() {
+  var deerNum = 10;
+  deerNum = 10 + 10;
+}
+
+// this function cannot access deerNum.
+function secondFunction(){
+  deerNum = 10 + 10;
+}			 		</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>Guess the result for the code below. </p>
+			<pre>
+var deerNum = 10; // global var deerNum
+
+function newDeerNum() {
+  var deerNum = 12; // local var deerNum
+  return deerNum;
+}
+
+function whatIsDeerNum(){
+  return deerNum;
+}
+
+/* calling function whatIsDeerNum to see
+   which one it will return */
+
+my globalDeerNum = whatIsDeerNum();
+
+/* log the deerNum that whatIsDeerNum 
+   returns */
+
+console.log(globalDeerNum);			 		</pre>
+		  
+			<button class="demonstrateButton" onclick="chapter38()">Guess the Result</button>
+			<p class="demoP" id="guess38"></p>
+		</div>	
+	
+			 <h2> Chapter 39 and Chapter 40 Concepts: Switch Statement.</h2>
+		 <p>Chapter 39 and 40 focus on swith statement. Switch statement work similar to the If Else statement. It can make the code easier if there are many conditions to meet.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <pre>
+// a variable is defined.
+
+var someVar = value;
+
+/* Use this known value to compare 
+   in a switch statement. If someVar 
+   equals the value for the case, 
+   then the code for that case will 
+   execute. */
+
+switch(someVar) {
+  case &quot;value&quot;: 
+    code to be execute;
+    break;
+  case &quot;value: 
+    code to be executed;
+    break;
+  case &quot;value:
+    code to be executed;
+    break;
+  default:
+    code to be executed; 
+}			 </pre>
+			 <p>A few points to remember:</p>
+			 <ul>
+			   <li>The variable someVar above is compared to the values corresponding to the case. If it matches the case value, the code for that case will be executed.</li>
+			   <li>Use break; to stop the switch execution after the values match and the code executes successfully. If the break statement is not included, the codes for the remaining cases will all execute which is not something we want. </li>
+			   <li>The last case of the switch statement is the default; which means if none of the cases match, the code for the default statement will execute. The default statement is optional. The default statement does not need a break; because it is usually the last execution of the switch statement; however, it is always safe to include break; for any last execution of the switch statement.</li>
+			 </ul>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example		    </h3>
+			<pre>
+/* defining a variable to compare */
+
+var deerName = &quot;Mark&quot;;
+
+/* compare deerName to all the cases */
+
+switch(deerName) {
+  case &quot;Christy&quot;: 
+    console.log(&quot;Hello &quot; + deerName);
+    break;
+  case &quot;Mark&quot;: 
+    console.log(&quot;Hello &quot; + deerName);
+    break;
+  case &quot;Jennifer&quot;:
+    console.log(&quot;Hello &quot; + deerName);
+    break;
+  default:
+    console.log(&quot;Well, hello there!&quot;);
+}			 		</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>Let's see if you are a new Deer or a returning Deer.</p>			
+		  <button class="demonstrateButton" onclick="chapter39()">Enter Name</button>
+		  <p class="demoP" id="guess39"></p>
+		</div>	
+	
+			 
+		
+	  </main>
+	</div>
+		
+	<footer> Designed by &nbsp;<span class="fontAlmendraDisplay bold">The Vegan Deer </span>
+		<p> Homework Help: 
+		<a href="https://stackoverflow.com/questions/8935414/getminutes-0-9-how-to-display-two-digit-numbers">StackOverflow</a>, <a href="https://www.w3schools.com/js/js_switch.asp">W3schools</a> </p>
+	  <button onclick="window.location.href='http://validator.w3.org/check?uri=referer'">&check; HTML</button>
+	  <button onclick="window.location.href='http://jigsaw.w3.org/css-validator/check/referer'">&check; CSS</button>  
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Vegan Deer :: SWTL 71-80</title>
+	<link rel = "stylesheet" type = "text/css" href = "styles/swtl.css" />
+	<link rel = "stylesheet" type = "text/css" href = "styles/swtl_master.css" />
+	<link rel = "stylesheet" type = "text/css" href = "styles/swtl_chapters_61_70.css" />
+	<script src="scripts/swtl_chapters_71_80.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Almendra%20Display" rel="stylesheet">		
+		<link href="https://fonts.googleapis.com/css?family=Kite%20One" rel="stylesheet">
+	<!--
+	Name: Kim Le
+		   Assignment: M9B - SWTL JS Chapters 71 - 80 
+		   Course: Web 115 - Web Markup and Scripting
+		   -->    
+</head>
+
+<body>
+	<header> The Vegan Deer <h2 class="rightText"> A place for gentle dining.</h2></header>  
+	<nav> 		
+	  <ul>			
+				<li><a href="http://students.cpcc.edu/~ktlc8cb4/public_html/web115/">Webspace</a></li>
+				<li><a href="https://github.com/ktlc8cb4">GitHub</a></li>
+				<li><a href="https://ktlc8cb4.github.io/">GitHub Website</a></li>
+				<li><a href="https://ktlc8cb4.github.io/web115/">GitHub Pages</a></li>
+				<li><a href="https://www.freecodecamp.org/ktlc8cb4">Freecodecamp</a></li>
+				<li><a href="https://www.codecademy.com/profiles/KimLe33">Codecademy</a></li>
+				<li><a href="https://www.khanacademy.org/profile/kaid_655162339461744285666695/">Khan Academy</a></li>
+				<li><a href="https://jsfiddle.net/user/ktlc8cb4/">JsFiddle</a></li>
+				<li><a href="https://profile.edx.org/u/ktlc8cb4">EdX</a></li>
+				<li><a href="https://blackboard.cpcc.edu/webapps/Bb-wiki-BBLEARN/wikiView?course_id=_976875_1&wiki_id=_18929_1&page_guid=b5f5751732f14958b689e3c2c91814ef">
+						LinkedIn</a></li>					
+				</ul> 	
+	</nav> 
+	
+	<div id="wrapper">
+	<main>
+		
+		<h1>Smarter Way To Learn JS</h1>
+	   	<h1> Chapters 71 - 80</h1>
+		
+		<!-- Chapter 71 -->
+	
+		<h2> Chapter 71 Concept: Objects: Methods.</h2>
+	  <p>An object property can have a value that is a function. That function is an object method.</p>	
+	  <div class="darkGreen">
+			 <h3> Syntax</h3>
+			 <p>The syntax shows a function created within an object which becomes the object method.</p>
+			 <pre>
+var object = {
+ objectProperty1: value,
+ objectMethod: function(){
+   function code;}
+}; 			 </pre>
+			 <p>Notes to remember</p>
+			 <ul>
+				 <li>The function written withing an object uses the same syntax as other functions. </li>
+				 <li>If there is another property following the method, we need to add a comma at the end of the method just like a normal property.</li>
+				 <li>If there the method uses one of the object's property, then use &quot;this&quot; keyword as shown below to give an example of the method using the same object's property.</li>
+			 </ul>
+			 <pre>
+var object = {
+ objectProperty1: value,
+ objectMethod: function(){
+   return this.objectProperty1;}
+};</pre>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>This example will create a simple Deer object that records Deer profile. It will have a method that returns a  discount amount in dollars if our Deer is a senior with the age above 65. The discount will be 5 dollars plus the  percent discount multiplies the age of our Deer. The users will have to put in the discount percent.</p>
+			 <pre>var deer1 = {
+ name: &quot;John&quot;,
+ age: 70,
+ favDish: &quot;Avocado Salad&quot;;
+ deerDiscount: function(percentDisc) {
+  if (this.age &gt; 65) { 
+   return(5 + ((percentDiscount*this.age)/
+                100));
+  }
+ }
+};
+
+// Calling the method
+
+var discAmount = deer.deerDiscount(80);</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>In this demonstration, first, we will ask our Deer for their age. Then, we will demonstrate the example above to return a discount amount for our senior Deer.</p>
+			<p class="demoP">Our senior Deer always enjoy a discount.</p>
+			<p class="demoP" id="guess71"></p>
+		  <button class="demonstrateButton" onclick="chapter71()">Discount</button>
+		</div>	
+		
+		<!-- Chapter 72 -->
+	
+	  <h2> Chapter 72 Concepts: Objects: Constructors.</h2>
+      <p>This chapter shows us how to write a function that will serve as a constructor to mass produce objects of the same kind.</p>
+		
+	     <div class="darkGreen">
+		     <h3> Syntax			 </h3>
+			 <pre>
+// Creating the constructor
+
+function Object(parameter1,
+                         parameter2) {
+ this.property1 = parameter1;
+ this.property2 = parameter2;
+}
+
+// Creating an object using Constructor
+
+var object1 = 
+ new Object(parameter1, parameter2);
+			 </pre>
+			 <p>Notes to remember:</p>
+			 <ul>
+				 <li>The name of this constructor function starts with a capital letter.</li>
+				 <li>Each of the parameter is assigned to a property of the object that will be created.</li>
+				 <li>It is common to make the property name to be the same as the parameter name. In the above syntax, we did not use the same names.</li>
+			 </ul>
+			
+		</div>
+		
+		<div class="lightYellow">
+			<h3> Example and Demonstration</h3>
+			<p>With this chapter, we combine the example and demonstration into one section because there is no clickable demonstration to show.</p>
+			<p>Let's create a constructor that will be used to enter new Deer profile into our profile book. Then we use it to create a new Deer profile object.</p>
+			 <pre>
+// Creating a constructor
+
+function Deer(name, age, favDish) {
+ this.name = name;
+ this.age = age;
+ this.favDish = favDish;
+}
+
+// Creating an new Deer profile
+
+var deer1 = new Deer(&quot;John&quot;, 23, &quot;Salad&quot;);</pre>
+		</div>
+		
+		<!-- Chapter 73 -->
+		
+	
+	  <h2> Chapter 73 Concepts: Objects: Constructors and Methods.</h2>
+		 <p>This chapter shows us how to create a constructor with a function inside it. When we create a object using this constructor, the function becomes the object method. </p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <pre>
+// Creating the constructor
+
+function Object(parameter1,
+                         parameter2) {
+ this.property1 = parameter1;
+ this.property2 = parameter2;
+ this.method = function(mParameter){
+  code to be executed;
+ };
+}
+
+// Creating an object using Constructor
+
+var object1 = 
+ new Object(parameter1, parameter2);
+
+// Calling the method of that object
+
+object1.method(mParameter);			 </pre>
+			 <p>Notes to remember:</p>
+			 <ul>
+				 <li>Creating the method within a construction is the same as creating the method within an objecct. The only difference is the &quot;this&quot; keyword.</li>
+				 <li>With the inclusion of this method inside the constructor, every new object created will have this method.</li>
+				 <li>The parameter inside the method is not passed when the constructor is called to create a new object. This parameter will only need to be passed when calling that method.</li>
+			 </ul>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>The example below will create a constructor Deer with a method. Then, it will create a object and call the method within that object which is a method that will return the discount if our Deer is a senior over 65 years of age.</p>
+			 <pre>
+// Creating a constructor
+
+function Deer(name, age, favDish) {
+ this.name = name;
+ this.age = age;
+ this.favDish = favDish;
+ this. deerDiscount = function() {
+  if (this.age &gt; 65) { 
+   return Math.round(5 + ((5*this.age)/
+                100));
+  }
+ };
+}
+
+// Creating an new Deer profile
+
+var deer1 = new Deer(&quot;John&quot;, 23, &quot;Salad&quot;);
+
+// Calling the method
+
+var discAmount = deer1.deerDiscount()	</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will use the example above to create a new Deer profile object, and return a discount amount according to the Deer's age.</p>
+			<p class="demoP" id="guess73"></p>
+			<p class="demoP" id="guess73-1"></p>
+		  <button class="demonstrateButton" onclick="chapter73()">Discount</button>
+		</div>	
+		
+		<!-- Chapter 74 -->
+	
+	  <h2> Chapter 74 Concepts: Objects: prototypes.</h2>
+		 <p>When we write a method inside a constructor, it will write this method for every new object created by that constructor. This is too many duplicates. This chapter shows us to write a prototype for the object constructor which will be shared by as many instances of that constructors as been created.		 </p>
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <pre>
+Object.prototype.prototypeMethod = 
+ function() {
+  codes within the constructor;
+}
+
+// Creating a prototype property
+
+Object.prototype.property = value;</pre>
+		   <p> Notes to remember:</p>
+			 <ul>
+				 <li>We don't include the method when we create the constructor. We add the above syntax after the constructor has been created.</li>
+				 <li>Prototypes can be applied to both methods and properties as seen above.</li>
+			 </ul>
+			
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration and Example.</h2>
+			<p>There is no demonstration for this chapter since it's only informational.</p>
+			<p>In this example, we will create a constructor with a prototype method called deerDiscount for our Deer object.</p>
+			<pre>
+// Creating a constructor
+
+function Deer(name, age, favDish) {
+ this.name = name;
+ this.age = age;
+ this.favDish = favDish;
+ this. deerDiscount = function() {
+  if (this.age &gt; 65) { 
+   return Math.round(5 + ((5*this.age)/
+                100));
+  }
+ };
+}
+
+// Creating a method prototype
+
+Deer.protoype.deerDiscount = function() {
+ if (this.age &gt; 65) { 
+   return Math.round(5 + ((5*this.age)/
+                100));
+  }
+};</pre>
+			
+			
+		</div>	
+		
+		<!-- Chapter 75 -->
+	
+			 <h2> Chapter 75 Concepts: Objects: Checking for Properties and Methods.</h2>
+		 <p>We can check to see if an object has a certain property or method.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <pre>
+// Check for property
+
+var aVar = &quot;property&quot; in object;
+
+// Check for method
+
+var Avar = &quot;method&quot; in object;
+
+/* Check to see all the properties 
+   of an object
+
+var listOfProperties = [];
+for (var prop in object) {
+ listOfProperties.push(prop);
+}
+
+// Using hasOwnProperty
+
+var aVar = 
+ hasOwnProperty(&quot;property&quot;);
+
+// Using hasOwnProperty to get a list
+
+var listOfProperties = [];
+for(var prop in object) {
+ if(object.hasOwnProperty(prop)){
+  listOfProperties.push(prop);
+ }
+}			 </pre>
+			 <p>Note to remembers:</p>
+			 <ul>
+				 <li>When checking to see if an object has the property or method, the return value is true or false.</li>
+				 <li>The hasOwnProperty technique only shows the properties or methods that were declared when the object was created, or the properties and methods that came with the original constructor. The prototype or inherited properties/methods.</li>
+				 <li>The var prop inside the parentheses doesn not have to be &quot;prop&quot;, it can be any other names.</li>
+			 </ul>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>This example creates a Deer object and check for one of its properties.</p>
+			 <pre>
+// Create an deerProfile object
+
+var deerProfile1 = {
+ name: &quot;John&quot;,
+ age: 23,
+ favDish: &quot;Salad&quot;
+};
+
+// Check for the property &quot;name&quot;
+
+var deerName = &quot;name&quot; in deerProfile1;</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will use the example above to create a deerProfile object and let you check for properties to get a return value of true of false.</p>
+			<p class="demoP">This is our deerProfile1</p>
+			<p>DeerProfile1</p>
+			<ul>
+				<li>Name: John</li>
+				<li>Age: 23</li>
+				<li>Favorite: "Salad"</li>
+			</ul>
+		  <p>Please use the three properties above to check to see if the object has that certain property. You can also check for any property that is not included in the above object.</p>
+			
+		  <button class="demonstrateButton" onclick="chapter75()">Check Property</button>
+			<p class="demoP" id="guess75"></p>
+		</div>	
+	
+		<!-- Chapter 76 -->
+	  <h2> Chapter 76 Concepts: Brower Control: Getting and Setting the URL.</h2>
+		 <p>This chapter shows us how we can use Javascript to tell us the location of the webpage. It can also tell the browser to go a certain location.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <pre>
+// Get the URL of a curretn web page
+
+var Avar = window.location.href;
+
+// Get just the domain name
+
+var Avar = window.location.hostname;
+
+// Get just the path
+
+var Avar = window.location.pathname;
+
+// Get just the anchor
+
+var Avar = window.location.hash;
+
+// Direct the browser to go to a URL
+
+window.location.href = &quot;URL Address&quot;;</pre>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>Let's direct our browser to go W3schools page</p>
+			 <pre>
+window.location.href = 
+ &quot;https://www.w3schools.com/&quot;;</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>Let's go take a look at cute young Deer.</p>
+			<button class="demonstrateButton" onclick="chapter76()">Check Out The Cuteness</button>
+		</div>	
+		
+		<!-- Chapter 77 -->
+	
+	  <h2> Chapter 77 Concepts: Browser Control: Getting and Setting the URL Another Way.</h2>
+		 <p>This chapter shows us how set or get the URL with replace(), assign(), and reload().</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <pre>
+// Using replace()
+
+window.location.replace(&quot;URL&quot;);
+
+// Using assign()
+
+window.location.assign(&quot;URL&quot;);
+
+// To reload the current page 
+
+window.location.reload(true);
+window.location.reload();
+window.location.reload(false);
+window.location.href = 
+ window.location.href;			 </pre>
+			 <p>Notes to remember;</p>
+			 <ul>
+				 <li>The assign() allows the users to backspace to the previous page.</li>
+				 <li>The replace() does not allow the users to backspace to the previous page. If the user uses backspace, it will direct the users to the page previous to the previous page.</li>
+				 <li>If the argument of the reload() is true, the browser reloads the page from the server.</li>
+				 <li>If the argument of the reload() is false, the browser reloads the page from the cache if the page has been cached.</li>
+			 </ul>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>This examples will direct the browser to W3schools by using assign().</p>
+			 <pre>
+window.location
+ .assign(&quot;https://www.w3schools.com/&quot;);			 	</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>Let's just go to page that shows cuteness.</p>
+			<button class="demonstrateButton" onclick="chapter77()">Show Cuteness</button>
+		</div>	
+		
+		<!-- Chapter 78 -->
+	
+	  <h2> Chapter 78 Concepts: Brower Control: Forward and Reverse.</h2>
+		 <p>This chapter shows us how to direct the browser to go backward one page in history or forward one page in history when the users press backspace or click on the back button. We can also get the URL of the page where the users has clicked on a link to get to another page.</p>
+		 <p>If there is no page forward or backward in history, the browser does nothing.</p>
+		 <p>You can use a number to direct the browser to go back or forward by that number of pages. A negative number will direct the browser to go backward. A positive number directs the browser to go forward.</p>
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <pre>
+// To go backward in history
+
+history.back();
+
+// To go forward in history
+
+history.forward();	
+
+// To go backward to 3 pages in history
+
+history.go(-3);
+
+// To go forward to 3 pages in history
+
+history.go(3);
+
+/* To get the URL of the page where a 
+   link was clicked.
+
+var aVar = document.referrer;		 </pre>
+			 <p>Notes to remember:</p>
+			 <ul>
+				 <li>When using the go(number) method, there is no reliable way to know how many pages forward or backward are in the history.</li>
+				 <li>The referrer method only works if a link was clicked. if the users get to the current page through a bookmark or by entering the URL, Javascript will not return the URL of the page where users came from. It will return an empty string.</li>
+			 </ul>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+		  <p>This example shows how to go back to the previous page.</p>
+			 <pre>
+history.back();</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>This demonstration will take you to the previous page where you came from. Though, I've tested using the Backspace key, and it does't work. It only works when I press the back button, but the back button always work even if I didn't add this function.</p>
+			<button class="demonstrateButton" onclick="chapter78()">Go Back</button>
+		</div>	
+		
+		<!-- Chapter 79 -->
+	
+			 <h2> Chapter 79 Concepts: Browser Control: Filling the Window with Content.</h2>
+		 <p>This chapter shows us how to create a pop up window and fill it with content.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <pre>
+// Creating a popup window
+
+var popUp = window.open();
+
+// Creating content
+
+var content = &quot;content&quot;;
+
+// Filling the popup with content
+
+popUp.document.write(content);
+popUp.location.assign(&quot;URL to content&quot;);
+popUp.location.href = &quot;URL&quot;;
+
+// To close the popUp window
+
+popUp.close();			 </pre>
+			 <p>Notes to remember:</p>
+			 <ul>
+				 <li>Different browsers open the popup window at different locations or a new window. We cannot control this.</li>
+				 <li>When writing the content for the variable content, anything inside the content that requires quotation marks need to be in single quotes.</li>
+				 <li>The document.write method is used to fill an empty window.</li>
+			 </ul>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>This example creates a popUp windown with a greeting.</p>
+			 <pre>
+var popUp = 
+ window.open(`Hello, 
+             Welcome to The Vegan Deer!`);</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will use the example above to bring a greeting to you.</p>
+			<button class="demonstrateButton" onclick="chapter79()">Deer Greeting</button>
+		</div>	
+	
+		<!-- Chapter 80 -->
+			 <h2> Chapter 80 Concepts: Browser Control: Controlling the Window's Size and Location.</h2>
+		 <p>This chapter shows us how to control the size of the popup window.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <pre>
+var popUp =
+ window.open(&quot;URL&quot;,&quot;win1&quot;,
+             &quot;width=400,
+             height=400,
+             left=200,
+             top=200&quot;
+             );		 </pre>
+			 <p>Notes to remember:</p>
+			 <ul>
+				 <li>win1 is a name parameter. It cannot have any spaces in it.</li>
+				 <li>The width, height, left, top are parameters to control the size and the location of the popup window. It cannot have any spaces in it. The different parameters in this sextion do not have to follow any specific order.</li>
+				 <li>The number 400 and 200 in the syntax are just examples. It can be any number of our choice. These numbers are in pixels.</li>
+				 <li>In order to specify these parameters, you have to specify the URL and a name first.</li>
+				 <li>We can specify the window size without the window position, but we cannot specify the window position without the size. It will be ignored.</li>
+				 <li>The whole popup window specifications can be saved to a variable and be used in the open() parentheses. </li>
+			 </ul>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>This example will open a popup window with a specific size and a specific location.</p>
+			 <pre>
+var popUp = 
+ window.open(&quot;&quot;, 
+             &quot;someName&quot;,
+             &quot;width=600,
+             height=400,
+             left=350,
+             top=100&quot;);<br>	var deerGreeting = 
+  &quot;Welcome to The Vegan Deer!&quot;;<br>	popUp.document.write(deerGreeting);</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>This demonstration will show a deer greeting with a specific window size and location.</p>
+			<button class="demonstrateButton" onclick="chapter80()">Deer Greeting</button>
+		</div>
+		
+		</main>
+	</div>
+		
+	<footer> Designed by &nbsp;<span class="fontAlmendraDisplay bold">The Vegan Deer </span><br>
+		Homework Help: <a href="https://stackoverflow.com/questions/15416672/apply-css-styles-to-popup-window-using-javascript">StackOverflow</a><br><br>
+	  <button onclick="window.location.href='http://validator.w3.org/check?uri=referer'">&check; HTML</button>
+	  <button onclick="window.location.href='http://jigsaw.w3.org/css-validator/check/referer'">&check; CSS</button>  
+    </footer>
+
+</body>
+</html>

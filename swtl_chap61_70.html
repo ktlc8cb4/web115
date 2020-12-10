@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Vegan Deer :: SWTL 61-70</title>
+	<link rel = "stylesheet" type = "text/css" href = "styles/swtl.css" />
+	<link rel = "stylesheet" type = "text/css" href = "styles/swtl_master.css" />
+	<link rel = "stylesheet" type = "text/css" href = "styles/swtl_chapters_61_70.css" />
+	<script src="scripts/swtl_chapters_61_70.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Almendra%20Display" rel="stylesheet">		
+		<link href="https://fonts.googleapis.com/css?family=Kite%20One" rel="stylesheet">
+	<!--
+	Name: Kim Le
+		   Assignment: M11B - SWTL JS Chapters 61 - 70 
+		   Course: Web 115 - Web Markup and Scripting
+		   -->    
+</head>
+
+<body>
+	<header> The Vegan Deer <h2 class="rightText"> A place for gentle dining.</h2></header>  
+	<nav> 		
+	  <ul>			
+				<li><a href="http://students.cpcc.edu/~ktlc8cb4/public_html/web115/">Webspace</a></li>
+				<li><a href="https://github.com/ktlc8cb4">GitHub</a></li>
+				<li><a href="https://ktlc8cb4.github.io/">GitHub Website</a></li>
+				<li><a href="https://ktlc8cb4.github.io/web115/">GitHub Pages</a></li>
+				<li><a href="https://www.freecodecamp.org/ktlc8cb4">Freecodecamp</a></li>
+				<li><a href="https://www.codecademy.com/profiles/KimLe33">Codecademy</a></li>
+				<li><a href="https://www.khanacademy.org/profile/kaid_655162339461744285666695/">Khan Academy</a></li>
+				<li><a href="https://jsfiddle.net/user/ktlc8cb4/">JsFiddle</a></li>
+				<li><a href="https://profile.edx.org/u/ktlc8cb4">EdX</a></li>
+				<li><a href="https://blackboard.cpcc.edu/webapps/Bb-wiki-BBLEARN/wikiView?course_id=_976875_1&wiki_id=_18929_1&page_guid=b5f5751732f14958b689e3c2c91814ef">
+						LinkedIn</a></li>					
+				</ul> 	
+	</nav> 
+	
+	<div id="wrapper">
+	<main>
+		
+		<h1>Smarter Way To Learn JS</h1>
+	   	<h1> Chapters 61 - 70 </h1>
+	
+		<h2> Chapter 61 Concepts: The DOM: Junk Artifacts and nodeType.</h2>
+		 <p>Reminding that Nodes are the elements in the the DOM. However, the browsers will read white spaces such as tabs or carriage returns as Nodes, but this is incorrect. This chapter shows several methods to solve this problem.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax</h3>
+			 <p>Method 1: Suggested by Mozzila Developer Network, we should carry the carriage to the next line, eliminating the problem of carriage returns. Take a look at the syntax below of an HTML file.</p>
+			 <p>Notice the closing carriage characters are on the next line. This eliminates the whitespace created by the carriage returns and prevents the browers to see it as a Node.</p>
+			 <pre>
+&lt;html
+&gt;&lt;head
+&gt;&lt;title
+&gt;Title of Page
+&lt;/title
+&gt;&lt;/head
+&gt;&lt;body
+&gt;&lt;div
+&gt;&lt;p
+&gt;Some paragraph content
+&lt;/p
+&gt;&lt;/div
+&gt;&lt;/body
+&gt;&lt;/html&gt;			 </pre>
+			 <p>Method 2: Use a minifier to clean up all the spaces in the HTML file.	Take	a	look at the an HTML file after minified.</p>
+		   <p>Notice that there are no returns. Every element is chained to the previous element wihth no space. There are minifier programs we can use to achieve this; however, we should back up our files before using the minifier to preserve the original file because the minified version is obviously very hard to read through to make changes.</p>
+			 <pre>
+&lt;html&gt;&lt;head&gt;some content&lt;/head&gt;&lt;body&gt;&lt;div&gt;
+&lt;p&gt;some text&lt;/p&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;			</pre>
+			 <p>Method 3: Using nodeType.</p>
+		   <p>nodeType is used for Javascript to identify what kind of node an element is. It returns a specific number depending on the type of node it finds. A &lt;div&gt; and &lt;p&gt; will return 1, a text node will return 3. The syntax below shows how we can use nodeType to target a specific element.		   </p>
+		   <pre>
+// The HTML block
+
+&lt;div id=&quot;id&quot;&gt;
+  &lt;p&gt; some text &lt;/p&gt;
+  &lt;p&gt; some text &lt;/p&gt;
+  &lt;p&gt; some text &lt;/p&gt;
+&lt;/div&gt;
+
+/* Script to target the second paragraph
+   and change its content */
+
+var aVar = 
+  document.getElementById(&quot;id&quot;);
+var counter = 0;
+for(var i=0;i&lt;aVar.childNodes.length;i++){
+ if(aVar.childNodes[i].nodeType===1){
+  counter++;
+ }
+ if(counter===2){
+ aVar.childNodes[i].innerHTML = &quot;content&quot;;
+ break;
+ }
+}</pre>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>We will use the syntax above to give this example to change the seccond paragraph in a div</p>
+			 <pre>
+// HTML block
+
+&lt;div id=&quot;deerMission&quot;&gt;
+ &lt;p&gt;Deer are gentle.&lt;/p&gt;
+ &lt;p&gt;Deer are cute.&lt;/p&gt;
+ &lt;p&gt;Deer are vegetarians.&lt;/p&gt;
+&lt;/div&gt;
+
+// Scripts to change second &lt;p&gt;
+
+ var aVar = 
+  document.getElementById(&quot;deerMission&quot;);
+var counter = 0;
+for(var i=0;i&lt;aVar.childNodes.length;i++){
+ if(aVar.childNodes[i].nodeType===1){
+  counter++;
+ }
+ if(counter===2){
+ aVar.childNodes[i].innerHTML = 
+  &quot;Deer are SUPER cute!&quot;;
+ break;
+ }
+}</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>Let's use the example above to see if we can change a cute Deer to a super cute Deer.</p>
+			<div id="deerMission">
+ 			  <p class="demoP">Deer are gentle.</p>
+ 			  <p class="demoP">Deer are cute.</p>
+ 			  <p class="demoP">Deer are vegetarians.</p>
+			</div>
+			<button class="demonstrateButton" onclick="chapter61()">Change the Deer</button>
+		</div>
+		
+		<!-- Chapter 62 -->
+	
+	  <h2> Chapter 62 Concepts: The Dom: More Ways to Target Elements.</h2>
+ 	  <p>This chapter shows us a few more ways to target elements using several methods: lastChild, firstChild, parentNode, nextSibling, previousSibling.</p>
+		
+ 	  <div class="darkGreen">
+			 <h3> Syntax</h3>
+			 <p>We can use all these methods using the  syntax  shown belown.</p>
+			 <pre>
+var aVar = parentNode.firstChild;
+var aVar = parentNode.lastChild;
+var aVar = element.nextSibling;
+var aVar = element.previousSibling;
+var aVar = childNode.parentNode;			 </pre>
+			 <p>Notes to remember:</p>
+	    <ul>
+		    <li>lastChild is used to target the last child node of that parent element.</li>
+				 <li>firstChild is used to target the first child node of that parent element.</li>
+				 <li>nextSibling is used to target the next child from the named child node of the same parent element.</li>
+				 <li>previousSibling is used to target the previous child node from the named child node of the same parent.</li>
+				 <li>parentNode is used to get the parent node of the named child node.		</li>
+	    </ul>
+ 	  </div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>The example below targets the last paragraph of the div element and change its class.</p>
+			 <pre>
+// HTML block
+
+&lt;div id=&quot;deerMission&quot;&gt;
+  &lt;p&gt;Deer are gentle.&lt;/p&gt;
+  &lt;p&gt;Deer are cute.&lt;/p&gt;
+  &lt;p&gt;Deer are vegetarians.&lt;/p&gt;
+&lt;/div&gt;
+
+// Script
+
+var aVar = 
+ document.getElementById(&quot;deerMission&quot;);
+aVar.lastChild.className += &quot; redDeer&quot;;</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will use the example above to change the class for the last paragraph. However, when I demonstrate the example, I have to use lastElementchild instead of lastChild per StackOverflow because the lastChild method didn't work for me.</p>
+			<div id="deerColor">
+  				<p>Deer are gentle.</p>
+  				<p>Deer are cute.</p>
+  				<p>Deer are vegetarians.</p>
+			</div>
+			<button class="demonstrateButton" onclick="chapter62()">Change Deer Color</button>
+		</div>	
+		
+		<!-- Chapter 63 -->
+	
+	  <h2> Chapter 63 Concepts: The Dom: Getting a Target's Name.</h2>
+		 <p>This chapter shows us how to get the target element's name by using nodeName.</p>
+		
+		 <div class="darkGreen">
+		   <h3> Syntax</h3>
+			 <p>Note that the nodeName methods returns the node name of an element in all uppercase letters. It returns the name of a text node in lowercase letters.			 </p>
+			 <p>We can also get the value of the text node by using nodeValue</p>
+			 <pre>
+// To get node name
+
+var aVar = targetElement.nodeName;
+
+// to get a text node value
+
+var aVar = textNode.nodeValue;			 </pre>
+		   <p>Note that nodeValue is not the same as innerHTML. innerHTML gets all the inner content of an element. nodeValue only shows the value of that one text node in that element.		</p>
+	    </div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>The example below will return the name of the first paragraph, which should be P.</p>
+			 <pre>
+// The HTML block
+
+&lt;div id=&quot;deerMission&quot;&gt;
+  &lt;p&gt;Deer are gentle.&lt;/p&gt;
+  &lt;p&gt;Deer are cute.&lt;/p&gt;
+  &lt;p&gt;Deer are vegetarians.&lt;/p&gt;
+&lt;/div&gt;
+
+// Script
+
+var aVar =
+ document.getElementById(&quot;deerMission&quot;);
+var someVar = aVar.firstChild;
+var elName = someVar.nodeName;</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will use the example above to get the first paragraph element name.</p>
+			<div id="nodeName">
+  			  <p>Deer are gentle.</p>
+  			  <p>Deer are cute.</p>
+  			  <p>Deer are vegetarians.</p>
+			</div>
+		  <p class="demoP" id="guess63"></p>
+			<button class="demonstrateButton" onclick="chapter63()">Get Node Name</button>
+		</div>
+		
+		<!-- Chapter 64 -->
+	
+	  <h2> Chapter 64 Concepts: The Dom: Counting Elements.</h2>
+		 <p>This chapter shows us how to make a list of all elements within a certain parent node. Then we can use this list to count the number of a certain element within that list. </p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <pre>// The HTML block
+
+&lt;div id=&quot;id&quot;&gt;
+  &lt;p&gt; some text &lt;/p&gt;
+  &lt;p&gt; some text &lt;/p&gt;
+  &lt;p&gt; some text &lt;/p&gt;
+&lt;/div&gt;
+
+// Scripts to change second &lt;p&gt;
+
+var aVar = 
+  document.getElementById(&quot;id&quot;);
+var nodeList = aVar.childNodes;</pre>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>Using the HTML block above, we will count the number of &lt;p&gt; elements within the div</p>
+			 <pre>
+// The HTML block
+
+&lt;div id=&quot;deerMission&quot;&gt;
+  &lt;p&gt;Deer are gentle.&lt;/p&gt;
+  &lt;p&gt;Deer are cute.&lt;/p&gt;
+  &lt;p&gt;Deer are vegetarians.&lt;/p&gt;
+&lt;/div&gt;
+
+// Script
+
+var aVar =
+ document.getElementById(&quot;deerMission&quot;);
+var pList = aVar.childNodes;
+var pNum = 0;
+var i; 
+for (i=0;i&lt;pList.length;i++) {
+ if(pList[i].nodeName.toLowerCase() ===
+ &quot;p&quot;) {
+ pNum++;
+ }
+}</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will use the example above to count the number of paragraphs in the div element.</p>
+			<div id="pCount">
+  				<p>Deer are gentle.</p>
+  				<p>Deer are cute.</p>
+  				<p>Deer are vegetarians.</p>
+		</div>
+		  <p class="demoP" id="guess64"></p>
+			<button class="demonstrateButton" onclick="chapter64()">Count the Paragraph</button>
+		</div>	
+	
+		<!-- Chapter 65 -->
+	  <h2> Chapter 65 Concepts: The Dom: Attributes.</h2>
+		 <p>Besides the children nodes an element can have, the element also has attributes. This chapter shows us how to work with attributes by using these methods: hasAttribute, getAttribute, setAttribute.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <p>Use hasAttribute to find out if an element has a certain attribute. If it does, it will return true.</p>
+			 <p>Use getAttribute to read the value of an attribute.</p>
+			 <p>Use setAttribute to set the values for an attribute.</p>
+			 <pre>
+// The hasAttribute method
+
+var aVar = element.hasAttribute(&quot;name&quot;);
+
+// The getAttribute method
+
+var aVar = element.getAttribute(&quot;name&quot;);
+
+// The setAttribute method
+
+var aVar = 
+ element.setAttribute(&quot;name&quot;,&quot;value&quot;);		 </pre>
+			 <p>Notes to remember:</p>
+			 <ul>
+				 <li>&quot;name&quot; inside the parentheses is the name of the attribute of interest.</li>
+				 <li>For setAttribute, &quot;name&quot; is the name of the attribute we want to set. &quot;value&quot; is the value we want to give to that attribute.</li>
+			 </ul>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>In this example, we will set an attribute of class to our first paragraph.</p>
+			 <pre>// The HTML block
+
+&lt;div id=&quot;deerMission&quot;&gt;
+  &lt;p&gt;Deer are gentle.&lt;/p&gt;
+  &lt;p&gt;Deer are cute.&lt;/p&gt;
+  &lt;p&gt;Deer are vegetarians.&lt;/p&gt;
+&lt;/div&gt;
+
+// Script
+
+var aVar =
+ document.getElementById(&quot;deerMission&quot;);
+var firstP = aVar.firstChild;
+firstP.setAttribute(&quot;class&quot;,&quot;redDear&quot;);</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will use the example above to set a class for the first paragraph of the div.</p>
+			<div id="guess65">
+  				<p>Deer are gentle.</p>
+  				<p>Deer are cute.</p>
+  				<p>Deer are vegetarians.</p>
+			</div>
+			<button class="demonstrateButton" onclick="chapter65()">Change Our Deer</button>
+		</div>	
+		
+		<!-- Chapter 66 -->
+	
+	  <h2> Chapter 66 Concepts: The Dom: Attribute Names and Values.</h2>
+		 <p>We can compile a list or an array of attributes of an elements. After the list is made, we can count the number of attributes that element has. We can also read the name of that attribute and its value. </p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax</h3>
+			 <p>Note that the returned name of the attribute is in lowercase.</p>
+			 <pre>
+// To make a list of attributes
+
+var aVar = 
+ element.attributes;
+
+// To get the name of an attribute
+
+var aVar = element.attribute.nodeName;
+
+// To get the value of an attribute
+
+var aVar = element.attribute.nodeValue;</pre>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>We will write an example to get the second attribute name for an element.</p>
+			 <pre>
+// The HTML block
+&lt;div id=&quot;myDiv&quot; class=&quot;redDeer&quot;&gt;
+ &lt;p&gt;Deer are gentle.&lt;/p&gt;
+ &lt;p&gt;Deer are cute.&lt;/p&gt;
+ &lt;p&gt;Deer are vegetarians.&lt;/p&gt;
+&lt;/div&gt;
+
+// Script
+
+var deerVar = 
+ document.getElementById(&quot;myDiv&quot;);
+var attrList = deerVar.attributes;
+var attrName = attrList[1].nodeName;	</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will use the example above to get the second attribute value of the div element.</p>
+		  <div id="chapter66" class="demoP">
+  				<p>Deer are gentle.</p>
+  				<p>Deer are cute.</p>
+  				<p>Deer are vegetarians.</p>
+			</div>
+		  <p class="demoP" id="guess66"></p>
+			<button class="demonstrateButton" onclick="chapter66()">Get Attribute Name</button>
+		</div>	
+		
+		<!-- Chapter 67 -->
+	
+	  <h2> Chapters 67 and 68 Concepts: The Dom: Adding Nodes.</h2>
+		 <p>This chapter shows us how to create a element, set its attribute,  add text where an element requires texts, and insert the newly created node to the page.</p>
+		
+		 <div class="darkGreen">
+		   <h3> Syntax</h3>
+			 <p>Step by step to create an element of &lt;p&gt;, set its attribute,  add text, and insert it into an div element on the page.</p>
+			 <p>The syntax also shows how to remove an element.</p>
+			 <pre>
+// Step 1 - create p node
+
+var pNode = document.createElement(&quot;p&quot;);
+
+// Step 2 - set its attribute
+
+pNode.setAttribute(&quot;attribute&quot;, &quot;value&quot;);
+
+// Step 3 - create text
+
+var aText = document.createTextNode(&quot;Hi&quot;);
+
+// Step 4 - add text to p node
+
+pNode.appendChild(aText);
+
+// Step 5 - insert the p node into a div
+
+targetDiv.appendChild(pNode);
+
+/* Step 5 - insert the p node into a div
+   at a specific location.
+
+targetDiv.insertBefore
+          (targetDiv.childNode[index]
+          .appendChidl(pNode);
+
+// To remove anelement.
+
+parentElement.removeChild(nodeToRemove);</pre>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>We will create a p node, add text to it, and insert it in a div</p>
+			 <pre>
+// The HTML block
+
+&lt;div id=&quot;addP&quot;&gt;
+ &lt;p&gt;Deer are gentle.&lt;/p&gt;
+ &lt;p&gt;Deer are cute.&lt;/p&gt;
+&lt;/div&gt;
+
+// Script
+
+var pNode = document.createElement(&quot;p&quot;);
+var text = 
+ document.createTextNode(&quot;Deer are 
+                         vegetarians.&quot;);
+pNode.appendChild(text);
+var deerDiv =
+ document.getElementById(&quot;addP&quot;);
+deerDiv.appendChild(pNode);</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will use the example above to add a paragraph to the div.</p>
+			<div id="addP">
+ 				<p>Deer are gentle.</p>
+ 				<p>Deer are cute.</p>
+			</div>
+			<button class="demonstrateButton" onclick="chapter67()">Add Paragraph</button>
+		</div>	
+		
+		<!-- Chapter 69 -->
+	
+			 <h2> Chapter 69 Concepts: Objects.</h2>
+		 		<p>Thid chapter shows us how to create an object.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <p>Create an object and its properties.</p>
+		   <p>Object properties can be string, number, an array.</p>
+			 <pre>
+var object = {
+ property: &quot;string&quot;,
+ property: number,
+ property: [item, item, item]
+};
+
+// To access an ojbect property
+
+object.property;</pre>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>Create a profile of our Deer.</p>
+			 <pre>
+var deer1 = {
+ name: &quot;John&quot;,
+ favDish: [&quot;Salad&quot;, &quot;Avocado&quot;]
+};</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will use the example above to access our Deer John's favorite dishes. </p>
+			<p class="demoP">John's Favorite Dishes</p>
+			<ul id="guess69"></ul>
+		  <button class="demonstrateButton" onclick="chapter69()">Deer Fav Dishes</button>
+		</div>	
+		
+		<!-- Chapter 70 -->
+	
+	  <h2> Chapter 70 Concepts: Objects: Properties.</h2>
+		 <p>We can change an object property, add an object property, or find out if a property exists for an object.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <pre>
+// Change an object property
+
+object.property = &quot;new string&quot;;
+object.property = newNumber;
+object.property = [new array];
+object.property = new boolean value;
+
+// Add a property to an object
+
+object.newProperty = value;
+
+// Find if an object has a certain value
+
+var aVar = &quot;property&quot; in object;		 </pre>
+			 <p>Notes to remember:</p>
+			 <ul>
+				 <li>When we query to see if an object has a certain property, the return value is true or false.		</li>
+			 </ul>
+	    </div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>In the example below, we will create a Deer object to store our Deer's profile. Then we want to change our Deer's favorite dish.</p>
+			 <pre>
+var deer1 = {
+ name: &quot;John&quot;,
+ age: 35,
+ favDish: &quot;Avocado Salad&quot;;
+};
+
+deer1.favDish = &quot;Sweet Potato Fries&quot;;</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will use the above example to change our Deer's favorite Dish.</p>
+			<p class="demoP">John's Profile</p>
+			<ul>
+				<li>Name: John</li>
+				<li>Age: 35</li>
+				<li id="favDish">Favorite Dish: Avocado Salad</li>
+			</ul>
+		  <button class="demonstrateButton" onclick="chapter70()">Deer New Dish</button>
+		</div>
+	</main>
+	</div>
+		
+	<footer> Designed by &nbsp;<span class="fontAlmendraDisplay bold">The Vegan Deer </span><br>
+		Homework Help: <a href="https://stackoverflow.com/questions/36358862/firstchild-lastchild-not-working-in-javascript">StackOverflow</a><br><br>
+	  <button onclick="window.location.href='http://validator.w3.org/check?uri=referer'">&check; HTML</button>
+	  <button onclick="window.location.href='http://jigsaw.w3.org/css-validator/check/referer'">&check; CSS</button>  
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Vegan Deer :: SWTL 41-50</title>
+	<link rel = "stylesheet" type = "text/css" href = "styles/swtl.css" />
+	<link rel = "stylesheet" type = "text/css" href = "styles/swtl_master.css" />
+	<script src="scripts/swtl_chapters_41_50.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Almendra%20Display" rel="stylesheet">		
+		<link href="https://fonts.googleapis.com/css?family=Kite%20One" rel="stylesheet">
+	<!--
+	Name: Kim Le
+		   Assignment: M8B - SWTL JS Chapters 41 - 50 
+		   Course: Web 115 - Web Markup and Scripting
+		   -->    
+</head>
+
+<body>
+	<header> The Vegan Deer <h2 class="rightText"> A place for gentle dining.</h2></header>  
+	<nav> 		
+	  <ul>			
+				<li><a href="http://students.cpcc.edu/~ktlc8cb4/public_html/web115/">Webspace</a></li>
+				<li><a href="https://github.com/ktlc8cb4">GitHub</a></li>
+				<li><a href="https://ktlc8cb4.github.io/">GitHub Website</a></li>
+				<li><a href="https://ktlc8cb4.github.io/web115/">GitHub Pages</a></li>
+				<li><a href="https://www.freecodecamp.org/ktlc8cb4">Freecodecamp</a></li>
+				<li><a href="https://www.codecademy.com/profiles/KimLe33">Codecademy</a></li>
+				<li><a href="https://www.khanacademy.org/profile/kaid_655162339461744285666695/">Khan Academy</a></li>
+				<li><a href="https://jsfiddle.net/user/ktlc8cb4/">JsFiddle</a></li>
+				<li><a href="https://profile.edx.org/u/ktlc8cb4">EdX</a></li>
+				<li><a href="https://blackboard.cpcc.edu/webapps/Bb-wiki-BBLEARN/wikiView?course_id=_976875_1&wiki_id=_18929_1&page_guid=b5f5751732f14958b689e3c2c91814ef">
+						LinkedIn</a></li>					
+				</ul> 	
+	</nav> 
+	
+	<div id="wrapper">
+	<main>
+		
+		<h1>Smarter Way To Learn JS</h1>
+	   	<h1> Chapters 41 - 50 </h1>
+	
+		<!-- Chapter 41 -->
+	  <h2> Chapter 41 Concepts: While Loops.</h2>
+		 <p>While Loop is similar to For Loop. They have different syntax.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <pre>
+var counter = 0;
+while(condition) {
+  Code to be executed;
+  counter++;
+}			 </pre>
+			 <p>A few points to remember:</p>
+			 <ul>
+			 	<li>var counter is initialized with a value before the loop.</li>
+			 	<li>The counter is updated within the code.</li>
+			 </ul>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>This example will welcome our new Deer 5 times.</p>
+			 <pre>
+var i = 0;
+var text = &quot;&quot;;
+while(i &lt; 5) {
+  text += &quot;Welcome to The Vegan
+               Deer!&quot;;  
+  i++;
+}
+console.log(text);		</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>Let's do it. Let's welcome our new Deer 5 times.</p>			
+			<button class="demonstrateButton" onclick="chapter41()">Welcome</button>
+		  <p id="guess41">&nbsp;</p>
+		</div>
+		
+		<!-- Chapter 42 -->
+	
+			 <h2> Chapter 42 Concepts: Do...While Loops.</h2>
+		 <p>Do...While Loop is similar to while loop. The only difference is Do...While Loop will execute the code at least once even if the condition doesn't satisfy.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax</h3>
+			 <p>Note that the while(condition) goes behind the do loop code.</p>
+			 <pre>
+var counter = 0;
+do { 
+  code to be executed;
+  i++;
+} while(condition);			 		</pre>
+	    </div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>The condition for the code below will never be true; however, the code will print out our favorite ingredient at least once.</p>
+			 <pre>
+var i = 6;
+var text = &quot;&quot;;
+do {
+  text += &quot;cheese&quot;;
+  i++;
+} while(i&lt;5);
+console.log(text);		 		</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will try the do...while loop in our example to show that the favorite ingredient will be printed out at least one time.</p>			
+			<button class="demonstrateButton" onclick="chapter42()">Result</button>
+			<p class="demoP" id="guess42"></p>
+		</div>
+		
+		<!-- Chapter 43 -->
+	
+			 <h2> Chapter 43 Concepts: Placing Scripts.</h2>
+		 <p>Scripts can be placed any where in the html file.&nbsp;Pieces of scripts can be scattered everywhere in an html file if that is what the programmer wants to do.&nbsp;A separate script file can be linked to an html file, which is the preferred method. Whether linking a separate file or embedding scripts within the html files, the preferred placement is at the bottom of the body so to allow CSS and HTML elements time to load before the scripts are loaded.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax</h3>
+			 <p>Placing a script inside an html file, use a pair of scipt tags.</p>
+			 <pre>
+&lt;script&gt; codes &lt;/script&gt;			 			 </pre>
+			 <p>Linking a separate script file. </p>
+			 <pre>
+&lt;script src=&quot;scriptfile.js&quot;&gt;&lt;/script&gt;</pre>
+	    </div>
+		
+		
+		<div class="lightYellow">
+			<h2> Example and Demonstration </h2>
+			<p>There are no examples or demonstrations for this chapter.</p>
+		</div>
+		
+		<!-- Chapter 44 -->
+	
+			 <h2> Chapter 44 Concepts: Commenting.</h2>
+		 <p>Comments are parts of code that are written for humans not machines. The code ignores them. While not being a part of the code, they are very important because they are remarks about the codes. In a team collaboration and debuggin, they are extremely important because programmers can read them to figure what the codes are written for.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax</h3>
+			 <p>Use two forward slashes for one line comments.</p>
+			 <pre>
+// One line comment. Just one line.			 			 </pre>
+			 <p>Use forwatd slash and star to enclose multi-line comments.</p>
+			 <pre>
+/* One line of comments. 
+   another line of comments.
+   and another line of comments.
+*/    </pre>
+	    </div>
+		
+		
+		<div class="lightYellow">
+			<h2> Example and Demonstration </h2>
+			<p>There are no examples or demonstrations for this chapter.</p>
+		</div>	
+		
+	<!-- Chapter 45 -->
+	
+			 <h2> Chapter 45 Concept: Event: Link.</h2>
+		 <p>When users interact with a website, it is called an event. The Javascript codes that respond to those events are called event handlers. This chapter focuses on the onClick event handler for the link element.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax			 </h3>
+			 <p> Using links to establish a place for user interactivity. The link below does not take a user to a link perse, it just refers to the event handler to respond accordingly.</p>
+			 <pre>
+&lt;a href=&quot;#&quot;
+  onclick = &quot;code to be execcuted;&quot;&gt;
+  link texts or images
+&lt;/a&gt;			  </pre>
+			 <p>Because it being a link, when the user clicks on it, it will refresh the page and take the users all the way to the beginning of the page. The users then have to scroll down to where they were. The syntax below will help with that problem.</p>
+			 <pre>
+&lt;a href=&quot;JavaScript:void(0)&quot;
+  onclick = &quot;code to be execcuted;&quot;&gt;
+  link texts or images
+&lt;/a&gt;			  </pre>
+	  </div>
+		
+		<div class="darkGreen">
+			<h3> Example		    </h3>
+			<pre>
+&lt;a href=&quot;JavaScript:void(0)&quot; 
+  onclick=&quot;alert('Welcome, Deer');&quot;&gt;
+A Deer's Greetting
+&lt;/a&gt;</pre>
+			<p> Notice that we set the code to be executed inside a quotation marks for the value of onclick. This is called an inline event handlers where the code is embedded as the value for onclick. There is a more professional way which the author will show us in a later chapter.</p>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>Let's display our tagline with the onclick event handler. </p>			
+			<a href="JavaScript:void(0)" onclick="chapter45()">Display our Tagline please.</a>
+			<p class="demoP" id="guess45"></p>
+		</div>	
+	
+		<!-- Chapter 46 -->
+			 <h2> Chapter 46 Concept: Events: Buttons.</h2>
+		 <p>For interactivity and event handling, using buttons for users to click  gives it a more professional look. </p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax</h3>
+			 <p>Use input tag to create a button.</p>
+			 <pre>
+&lt;input type=&quot;button&quot; 
+  value=&quot;value&quot; 
+  onclick=&quot;code to be executed&quot;&gt;			 </pre>
+			 <p>Use an image in place of a button.			 </p>
+			 <pre>
+&lt;img src=&quot;imagefile&quot; 
+  onclick=&quot;code to be executed&quot;&gt;		 		</pre>
+	    </div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>Using input to create a button that handles an event by displayng an alert message.</p>
+			 <pre>
+&lt;input type=&quot;button&quot;
+  value=&quot;click me&quot;
+  onclick=&quot;alert('Hello there!');&quot;&gt;		 	</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will use the above example to display an alert that welcomes our Deer.</p>			
+		  <input class="demonstrateButton" type="button" value="Welcome Message" onclick="alert('Welcome to The Vegan Deer!');">
+		</div>	
+	
+		<!-- Chapter 47 -->
+		
+	  <h2> Chapter 47 Concepts: Events: Mouse.</h2>
+		 <p>Use onMouseover and onMouseout to respond to the interaction when users hover their mouse over an element and then move their mouse away from that element.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax</h3>
+			 <p>onMouseover and onMouseout usually work together. When the users hover above an html element, onMouseover will execute its code. Then when the users move away from that html element, onMouseout will execute its code.</p>
+			 <pre>
+/* Showing syntax for both methods
+   when paired together to handle 
+   an event. */
+
+&lt;html element 
+  onMouseover=&quot;code to be executed&quot;
+  onMouseout=&quot;code to execute&quot;&gt;
+  element text if any
+&lt;/html element&gt;			 			 </pre>
+			 <p>Points to remember:</p>
+			 <ul>
+				 <li>The code that is executed can be written directly inside the quotaion mards following the event handler.</li>
+				 <li>The code that is executed can also be a calling of a function on a separate file. </li>
+			 </ul>
+			
+		</div>
+		
+		<div class="darkGreen">
+			<h3> Example</h3>
+			<p>An example to display an alert message with an h2 element.</p>
+			<pre>
+&lt;h2 onMouseover=
+  &quot;alert('Let's go to The Vegan Deer');&quot;&gt;
+  Where are we going for dinner?
+&lt;/h2&gt;			 			 </pre>
+			<p>An example of displaying different images using the pair of onMouseover and onMouseout.</p>
+			 <pre>
+&lt;img src=&quot;deer.jpg&quot; 
+  onMouseover=&quot;src='bambi.jpg'&quot;
+  onMouseout=&quot;src='deer.jpg'&quot;&gt;			 </pre>
+			 <p>The above example will revert display bambi.jpg when users hover the mouse over the image then change the display from bambi.jpg back to deer.jpg when users move the mouse away.		</p>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>Place your mouse over The Vegan Deer to see our Vegan Deer grow.</p>
+			<h2 class="demonstrateButton" onMouseover="this.style.fontSize='100px';" onMouseout="this.style.fontSize='18px';"><span class="fontAlmendraDisplay bold">The Vegan Deer</span></h2>
+		</div>	
+		
+		<!-- Chapter 48 -->
+	
+			 <h2> Chapter 48 Concepts:  Events: Fields.</h2>
+		 <p>Using onFocus and onBlur as event handlers for form fields.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax</h3>
+			 <p>Similar to onMouseover and onMouseout, onFocus and onBlur are used together to handle events when users click on a form field and move away from the field respectively.</p>
+			 <pre>
+&lt;input type=&quot;formtype&quot;  
+  onFocus=&quot;code to be executed&quot;
+  onBlur=&quot;code to be executed&quot;&gt;			 		</pre>
+	    </div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>The code to be executed can either be written inline or a function being called from a separate script. The second approach is more professional.</p>
+			<p>In this example, we will use inline code. </p>
+			<pre>
+&lt;input type=&quot;text&quot; 
+  onFocus=&quot;this.style.backgroundColor=
+    '#ffe4b5';&quot;
+  onBlur=&quot;this.style.backgroundColor=
+    '#c9ffe2';&quot;&gt;			 		</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>We will demonstrate the above example. </p>
+			<label>Please click on the form field to see the background color change, then click on any space outside of it.</label><br>
+			<input type="text" 
+				   onFocus="this.style.backgroundColor='#ffe4b5';"   onBlur="this.style.backgroundColor='#c9ffe2';">	
+		</div>
+		
+		<!-- Chapter 49 -->
+	
+			 <h2> Chapter 49 Concepts: Reading Field Values.</h2>
+		 <p>How to read field values which are the information users enter into a form field.</p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax</h3>
+			 <p>One event handler for form fields is onSubmit. The syntax is below. Notice the onSubmit event handler is on for &lt;form&gt; tag, not on the submit button.</p>
+			 <pre>
+&lt;form onSubmit=&quot;code to be executed;&gt;
+  &lt;input type&quot;formtype&quot;&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;submit&quot;&gt;
+&lt;/form&gt;			 </pre>
+			 <p>Sometimes, the code to be executed from the event handler needs to read the values the users' input. The syntax to read those values is shown below.			 </p>
+			 <pre>
+document.getElementById(&quot;id&quot;).value;			 </pre>
+		   <p>We need to make sure we give the HTML element an ID, in this case it is usually an input element. The document.getElementById(&quot;id&quot;) is a command that tells the document to choose the element with the ID we specify inside the parentheses.	    </p>
+	    </div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>Using the event handlers and print out the value obtained from users' input. In this example, we will call a function from a separate script.</p>
+			 <pre>
+// HTML code
+
+&lt;form onSubmit=&quot;lunch();&quot;&gt;
+&lt;label for=&quot;lunch&quot;&gt;
+  What's for lunch
+&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;lunch&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;submit&quot; value=&quot;submit&quot;&gt;
+&lt;/form&gt;
+
+//script function
+
+function lunch() {
+  var lunch = 
+   document.getElementById(&quot;lunch&quot;).value;
+  console.log(lunch);
+}		</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration </h2>
+			<p>Let's use the above example and ask our Vegan Deer what they are having for lunch.</p>
+			<form onSubmit="chapter49(); return false"> 
+			<label for="lunch"> What do you want for lunch, Deer?</label><br>
+			<input type="text" id="lunch" value="Cheese sandwich">
+			<input type="submit" value="Submit" class="demonstrateButton">
+			</form>
+			<p class="demoP" id="guess49"></p>
+		</div>	
+		
+		<!-- Chapter 50 -->
+	
+	  <h2> Chapter 50 Concepts: Setting Field Values.</h2>
+		 <p>You can also set the form field values. This is normally used to automatic fill in values for form fields based on other values the users have input. For example, if the users filled in the form with a number of their credit cards, the form can automatically fill in if the credit card is a Master, Visa or others based on the card number the users has put in. </p>
+		
+		 <div class="darkGreen">
+			 <h3> Syntax</h3>
+			 <p>We use the same code line as when we get values from the fields. The only difference is we also set it equal to some value we choose. </p>
+			 <pre>
+document.getElementById(&quot;id&quot;).value = 
+  value;		 </pre>
+			 <p>Reminding that the ID is important. It correlates the ID that belongs to the HTML element. So we must remember to give the targeted HTML element the ID we want to change the value for.		</p>
+	    </div>
+		
+		<div class="darkGreen">
+			<h3> Example </h3>
+			<p>Let's say our Deer has made an order by using a form. If our Deer orders a Veggie burger, the free side is sweet potato fries. If they order anything else, the free side is potato salad. We will automatically fill that in for our Deer.</p>
+			 <pre>
+// HTML code.
+
+&lt;form onSubmit=&quot;lunch();&quot;&gt;
+  &lt;label for=&quot;order&quot;&gt;
+    What's for lunch, Deer?
+  &lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;text&quot; 
+         id=&quot;order&quot;
+         value=&quot;Cheese Sandwich&quot;&gt;&lt;br&gt;
+  &lt;label for=&quot;side&quot;&gt;
+     Your free side is:
+  &lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;text&quot;
+         id=&quot;side&quot;
+         value=&quot;&quot;&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+
+// Script 
+
+function lunch() {
+  var order = 
+   document.getElementById(&quot;order&quot;).value;
+   order = order.toLowerCase();
+  if (order === &quot;veggie burger&quot;){
+    side = &quot;Sweet potato fries&quot;;
+  } else {
+    side = &quot;Potato salad&quot;;
+  }
+  console.log(order + &quot; &quot; + side);
+}			 		</pre>
+		</div>
+		
+		<div class="lightYellow">
+			<h2> Demonstration</h2>
+			<p>Let's demonstrate the example above.</p>
+			<form onSubmit="chapter50(); return false"> 
+			<label for="order"> What is your order, Deer?</label><br>
+			<input type="text" id="order" value="Veggie Burger"><br>
+			<label for="side">Your free side is:</label><br>
+			<input type="text" id="side" value="">
+			<input type="submit" value="Submit" class="demonstrateButton">
+			</form>
+			<p class="demoP" id="guess50"></p>
+			<ul id="list50">
+			</ul>
+		</div>
+		
+		</main>
+	</div>
+		
+	<footer> Designed by &nbsp;<span class="fontAlmendraDisplay bold">The Vegan Deer </span>
+		<p> Homework Help: 
+		<a href="https://stackoverflow.com/questions/19454310/stop-form-refreshing-page-on-submit#:~:text=One%20great%20way%20to%20prevent,false%20with%20your%20onsubmit%20attribute.&text=This%20problem%20becomes%20more%20complex,by%20hitting%20Enter%20key">StackOverflow</a>, <a href="https://www.w3schools.com/js/js_switch.asp">W3schools</a> </p>
+	  <button onclick="window.location.href='http://validator.w3.org/check?uri=referer'">&check; HTML</button>
+	  <button onclick="window.location.href='http://jigsaw.w3.org/css-validator/check/referer'">&check; CSS</button>  
+    </footer>
+
+</body>
+</html>
