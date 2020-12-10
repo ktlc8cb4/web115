@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*FONT: Almendra Display: header ---- Kite one: body*
+Color: #2f4f4f : darkgreen --- #ffe4b5 : light gold --- #a18871 : golden yellow 
+	     #b6f9c9 --- #c9ffe2 : light green -- #ffffcc : light yellow --- #ffffff : white */ .fontAlmendraDisplay { font-family: 'Almendra Display'; font-style: italic; } .rightText {text-align: right; color: #ffe4b5; font-weight: bold; font-family: "Kite One"; font-size: 25px; padding: 0px;
+	margin: 0px;}.center { text-align: center; }
+
+   .bold { font-weight: bold;  font-family: 'Almendra Display'; background-color: #2f4f4f; color: #ffe4b5; 
+    padding: 0px 10px 0px 5px; margin-right: 5px;} 
+	
+.demoP {font-weight: bold;  padding: 5px 0px 5px 0px; font-size: 25px; margin: 10px;}
+  
+   .lightYellow { background-color: #ffffcc; padding: 5px 10px; color:#2f4f4f; margin: 3px; margin-bottom: 30px; font-weight: bold; border-bottom: 6px solid #a18871;}
+
+   .darkGreen { background-color:#2f4f4f; padding: 5px 10px; color:#ffffcc; font-weight: bold; margin: 3px; }
+
+   .demonstrateButton {background-color: #2f4f4f; padding: 10px 15px; border-radius: 5%; text-align: center; 
+    font-size: 18px; margin: 15px; transition-duration: 0.4s; cursor: pointer; 
+    color: #ffffcc; font-weight: bold; box-shadow: 7px 7px 3px #a18871; height: auto; width: auto; display: block; font-family: 'Kite One'; }
+
+/*FONT: Almendra Display: header ---- Kite one: body*
+Color: #2f4f4f : darkgreen --- #ffe4b5 : light gold --- #a18871 : golden yellow 
+	      : magic Mint--- #c9ffe2 -- #ffffcc : light yellow --- #ffffff : white */	
+
+   h1 {  font-weight: bold;  padding: 5px 0px 5px 0px; color: #2f4f4f; font-size: 30px; margin: 10px; text-align: center; }  
+
+   h2 { font-weight: bold;  padding: 5px 0px 5px 0px; font-size: 25px; margin: 10px; }
+
+   h3 { font-weight: bold;  padding: 5px 0px 5px 0px; font-size: 22px; margin: 10px;}
+
+   p { margin: 10px 10px 10px 25px; font-weight: normal; } 
+   
+	a { margin: 10px; color: #a18871;}
+ 
+   pre {padding: 15px 15px 15px 15px; font-family: Consola, monaco, monospace; font-size: 18px; background-color: #c9ffe2; color: #2f4f4f; font-weight: normal; width: 450px; margin-left: 10px;}
+    
+   dt {margin-left: 15px; font-size: 20px;}
+
+   dd { margin-bottom: 15px;}
+
+ul li { font-weight: normal; padding-bottom: 10px;}
+ol li { font-weight: normal; padding-bottom: 10px;}
+form { padding: 15px; }
+input {padding: 5px; margin: 5px;}
+
+/*FONT: Almendra Display: header ---- Kite one: body*
+Color: #2f4f4f : darkgreen --- #ffe4b5 : light gold --- #a18871 : golden yellow 
+	     #b6f9c9 --- #c9ffe2 : light green -- #ffffcc : light yellow --- #ffffff : white */	
+  
+
+#freeBanana { font-size: 30px; padding: 10px;   }
+
+
+ @media (max-width: 600px) { 
+	 .demonstrateButton {background-color: #2f4f4f; padding: 15px; border-radius: 5%; text-align: center; 
+ font-size: 15px; margin: 4px 4px 10px 15px; transition-duration: 0.4s; cursor: pointer; 
+  color: #ffffcc; font-weight: bold; box-shadow: 7px 7px 3px #a18871; }
+	
+ }
+					 
+	 
+
+ 
+
+   
+

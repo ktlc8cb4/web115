@@ -1,0 +1,54 @@
+/* Stylesheet for m3b_codeplay*/
+/*FONT: Almendra Display: header ---- Kite one: body*
+Color: #2f4f4f : darkgreen --- #ffe4b5 : light gold --- #a18871 : golden yellow 
+	     #b6f9c9 --- #c9ffe2 : light green -- #ffffcc : light yellow --- #ffffff : white */	
+body {  background-color: white; font-family: 'Kite one'; } .fontAlmendraDisplay { font-family: 'Almendra Display'; font-style: italic; } 
+.rightText {text-align: right; color: #ffe4b5; font-weight: bold; font-family: "Kite One"; font-size: 25px; padding: 0px;
+	margin: 0px; border-radius: 0px; background-color: #2f4f4f; float: none;}
+
+
+.bold { font-weight: bold;  font-family: 'Almendra Display'; background-color: #2f4f4f; color: #ffe4b5; 
+    padding: 0px 5px 0px 5px; margin-right: 5px;  }    
+#wrapper { margin-right: auto;   margin-left: auto;    width: 95%;  font-size: 20px;}
+p { color: #2f4f4f;  background-color: #c9ffe2; margin-left: 70px; margin-top: 8px; margin-right: 20px; 
+margin-bottom: 8px;  padding: 10px 10px 10px 20px; border: 1px solid #2f4f4f}
+header { padding: 25px 30px 25px 30px;  background-color: #2f4f4f; color: #ffe4b5; font-weight: bold; 
+	font-family: 'Almendra Display'; font-size: 4rem;  font-style: italic;}  
+	nav {font-weight: bold; background-color: #c9ffe2;  text-align: center; padding: 5px;} 
+	nav ul {padding-top: 0px; padding-bottom: 5px; margin: 5px; }
+	nav li { list-style-type: none;    display: inline;   margin: 5px 8px;   font-size: 18px;   }
+	nav li a:link { color: #2f4f4f;  text-decoration: none;} 
+	nav li a:visited { color: #a18871; }
+	nav li a:hover { color: #996600;}
+	h1 {  font-weight: bold;  padding: 5px 0px 5px 0px; color: #2f4f4f; font-size: 30px; margin: 10px; text-align: center; }
+h2 { font-weight: bold; color: #2f4f4f; font-size: 18px; border-radius: 5px;
+	padding: 7px;  background-color: #c9ffe2; float: right; margin-bottom: 10px;} 
+	h2:hover { background-color: #ffe4b5; cursor: pointer;}
+h3 {color: #2f4f4f; font-weight: normal; font-size: 20px; margin-bottom: 25px;}
+/*Color: #2f4f4f : darkgreen --- #ffe4b5 : light gold --- #a18871 : golden yellow 
+	     #b6f9c9 --- #c9ffe2 : light green -- #ffffcc : light yellow --- #ffffff : white */	
+.pSpecial  {  padding: 20px;   color: #660000;  font-size: 35px;   background-color: #f2f2f2; margin-top: 10px;
+                   text-align: center; font-weight: bold; }
+footer {padding: 10px; color: #2F4F4F;  background-color: #ffffcc;text-align: center; margin-top: 8px;
+		border-top: 5px solid #a18871 } 	
+.code {background-color: #2f4f4f;  color:#ffffcc;  padding: 15px; width: 70%; margin-bottom: 1px; }
+.counter { list-style: none;  counter-reset: li }
+.counter li::before { content: counter(li);  color: #2f4f4f; float: left; width: 1em; margin-left: -2em;
+					font-weight: bold; font-size: 18px;}
+.counter li { counter-increment: li }
+button {
+  background-color: #2f4f4f; padding: 2px 3px; border-radius: 5%; text-align: center; display: inline-block; 
+  width: 100px; height: 40px; font-size: 15px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; 
+  color: #ffffcc; font-weight: bold; box-shadow: 7px 7px 3px #a18871; font-family: 'Kite One';} 
+button:hover {
+  background-color: #b6f9c2; color: #2f4f4f; cursor: pointer;
+}
+@media (max-width: 800px) {
+p { color: #660000;  background-color:#ffffcc; width: 97%; margin-left: 10px;}
+.code {color:white;  font-size: 20px; padding: 15px; width: 90%; position: relative;}
+
+}
+	
+
+
+

@@ -1,0 +1,15 @@
+
+
+#wrapper { margin-right: auto;    margin-left: auto;    width: 90%; }
+body { margin: 20px;    font-family: papyrus;	    color: black;     font-size: 1.2em;     background-color: #d9d9d9; }
+header { text-align: center;     color: red; }
+h2 { text-align: center; }
+footer { margin-top: 30px;    color: green;    font-style: italic;    text-align: center; }
+footer a { font-style: normal; }
+figcaption { font-size: 0.8em;    color: #a52a2a;    font-style: italic; }
+li { margin: 12px; }
+ol li { margin: 2px; }
+.boldtext { font-size: 1.1em;    font-weight: bold; }
+nav { text-align: center; }
+nav li { list-style-type: none;    display: inline;   margin: 10px; }   
+

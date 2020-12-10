@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Stylesheet for fizzbuzz1e*/
+/*FONT: Almendra Display: header ---- Kite one: body*
+Color: #2f4f4f : darkgreen --- #ffe4b5 : light gold --- #a18871 : golden yellow 
+	     #b6f9c9 --- #c9ffe2 : light green -- #ffffcc : light yellow --- #ffffff : white */	
+	
+h1 {  font-weight: bold;  padding: 5px 0px 5px 0px; color: #2f4f4f; font-size: 30px; margin: 10px; 
+		text-align: center; } 
+
+h2 {font-weight: bold; padding: 5px 0px 5px 0px; font-size: 20px; margin-top: 10px; margin-bottom: 2px;
+      color: #2F4F4F;} 
+
+p { margin: 10px; line-height: 2; } 
+
+a:link { color: #2f4f4f;  text-decoration: none;}
+a:visited { color: #2f4f4f; }
+a:hover { color: #a18871; font-weight: bold;}
+
+ol li {margin: 10px; padding: 5px;}
+
+input {  background-color: #c9ffe2; padding: 12px; margin: 4px 2px; color: #2f4f4f;}
+
+.num3 {background-color: #ffffcc;}
+.num5 {background-color: #c9ffe2;}
+.num7 {background-color: #ffe4b5;}
+.num3-5 {background-color: #00ff99;}
+.num5-7 {background-color: #b3ffff;}
+.num3-7 {background-color: #ffb3b3;}
+.allNumber{background-color: #ffb3ff;}
+
+
+/*FONT: Almendra Display: header - Kite one: body*
+Color: #2f4f4f : darkgreen - #ffe4b5 : light gold - #a18871 : golden yellow 
+	      : magic Mint- #c9ffe2 - #ffffcc : light yellow - #ffffff : white */	
+
+
+
+
+
+ @media (max-width: 600px) { 
+	
+ }
+					 
+	 
+
+ 
+
+   

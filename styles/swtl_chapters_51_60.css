@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+
+.redDeer { color: white; background-color: red; }
+
+figure {display: inline-block; }
+
+figure figcaption { font-style: italic; font-weight: normal; text-align: center;}
+
+.imgsize { width: 300px; height: 400px; }

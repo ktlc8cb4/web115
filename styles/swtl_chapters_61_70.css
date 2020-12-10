@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*FONT: Almendra Display: header ---- Kite one: body*
+Color: #2f4f4f : darkgreen --- #ffe4b5 : light gold --- #a18871 : golden yellow 
+	     #b6f9c9 --- #c9ffe2 : light green --- #ffffcc : light yellow --- #ffffff : white */
+
+.redDeer { color: white; background-color: red; }
+
+figure {display: inline-block; }
+
+figure figcaption { font-style: italic; font-weight: normal; text-align: center;}
+
+.imgsize { width: 300px; height: 400px; }
+
+.popUpGreeting {text-align: center; color: #2f4f4f; font-size: 6rem; font-weight: bold; background-color: #c9ffe2; margin-top: 100px;}
+
+.chapter80 {text-align: center; color: #2f4f4f; font-size: 3rem; font-weight: bold; background-color: #c9ffe2; margin-top: 100px;}
+
+.selectMenu {color: #2f4f4f; background-color: #c9ffe2; font-size: 1.2rem; }

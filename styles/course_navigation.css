@@ -1,0 +1,54 @@
+/*Stylesheet for navigating this course*/
+/*FONT: Almendra Display: header ---- Kite one: body*
+Color: #2f4f4f : darkgreen --- #ffe4b5 : light gold --- #a18871 : golden yellow 
+	     #b6f9c9 --- #c9ffe2 : light green -- #ffffcc : light yellow --- #ffffff : white */ .fontAlmendraDisplay { font-family: 'Almendra Display'; font-style: italic; } .rightText {text-align: right; color: #ffe4b5; font-weight: bold; font-family: "Kite One"; font-size: 25px; padding: 0px;
+	margin: 0px;}body { background-color: white; font-family: 'Kite one'; }
+	#wrapper { margin-right: auto;   margin-left: auto;    width: 95%;  font-size: 18px;}
+	header { padding: 25px 30px 25px 30px;  background-color: #2f4f4f; color: #ffe4b5; font-weight: bold; 
+	font-family: 'Almendra Display'; font-size: 4rem;  font-style: italic;}  
+	nav {font-weight: bold; background-color: #c9ffe2;  text-align: center; padding: 5px;} 
+	nav ul {padding-top: 0px; padding-bottom: 5px; margin: 5px; }
+	nav li { list-style-type: none;    display: inline;   margin: 5px 8px;   font-size: 18px;   }
+	nav li a:link { color: #2f4f4f;  text-decoration: none;} 
+	nav li a:visited { color: #a18871; }
+	nav li a:hover { color: #996600;}
+	h1 {  font-weight: bold;  padding: 5px 0px 5px 0px; color: #2f4f4f; font-size: 30px; margin: 10px; text-align: center; }  
+	h2 { font-weight: bold;  padding: 5px 0px 5px 0px;  color: #2f4f4f; font-size: 25px; } 
+	.magicMint {background-color: #c9ffe2; padding: 5px; text-align: left;}
+  .center { text-align: center; } .fontAlmendraDisplay { font-family: 'Almendra Display'; font-style: italic; } .rightText {text-align: right; color: #ffe4b5; font-weight: bold; font-family: "Kite One"; font-size: 25px; padding: 0px;
+	margin: 0px;}.bold { font-weight: bold;  font-family: 'Almendra Display'; background-color: #2f4f4f; color: #ffe4b5; 
+    padding: 0px 5px 0px 5px; margin-right: 5px;  }  
+  p { margin: 10px;  }  
+  dt { margin-top: 10px;}
+  dt { margin-top: 10px;}
+  /*FONT: Almendra Display: header ---- Kite one: body*
+Color: #2f4f4f : darkgreen --- #ffe4b5 : light gold --- #a18871 : golden yellow 
+	      : magic Mint--- #c9ffe2 -- #ffffcc : light yellow --- #ffffff : white */	
+footer {padding: 10px; color: #2F4F4F;  background-color: #ffffcc;text-align: center; margin-top: 8px;
+		border-top: 5px solid #a18871 } 	
+.lightYellow { background-color: #ffffcc; padding: 5px 15px; text-align:left; font-size: 20px; font-weight: bold;
+				margin: 5px; width: 20%; }
+.lightGreen{ background-color: #c9ffe2; padding: 5px 15px; text-align:left; font-size: 20px; font-weight: bold;
+				margin: 5px; width: 20%; }
+button {
+  background-color: #2f4f4f; padding: 2px 3px; border-radius: 5%; text-align: center; display: inline-block; 
+  width: 100px; height: 40px; font-size: 15px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; 
+  color: #ffffcc; font-weight: bold; box-shadow: 7px 7px 3px #a18871; font-family: 'Kite One';} 
+button:hover {
+  background-color: #b6f9c2; color: #2f4f4f;
+}
+
+ @media (max-width: 600px) { 
+	
+ }
+					 
+	 
+
+ 
+
+   
+
+
+
+
+

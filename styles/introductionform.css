@@ -1,0 +1,37 @@
+/*Stylesheet for navigating this course*/
+/*FONT: Almendra Display: header ---- Kite one: body*
+Color: #2f4f4f : darkgreen --- #ffe4b5 : light gold --- #a18871 : golden yellow 
+	     #b6f9c9 --- #c9ffe2 : light green -- #ffffcc : light yellow --- #ffffff : white */ 
+
+.formdivshow {display: block;}
+.formdivhide {display:none;}
+.pagedivhide {display:none;}
+.pagedivshow {display:block;}
+
+li {color: #2f4f4f; font-size: 1.3rem; }
+
+#myimage {height:270px; width:200px;}
+
+
+.formButton {  background-color: #2f4f4f; padding: 10px; border-radius: 5%; text-align: center; display: inline-block; 
+  font-size: 15px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer;  
+  color: #ffffcc; font-weight: bold; box-shadow: 7px 7px 3px #a18871; font-family: 'Kite One'; } 
+.formButton:hover {background-color: #ffffcc;color: #2f4f4f; box-shadow: 4px 4px 2px #a18871; }
+
+
+
+
+ @media (max-width: 600px) { 
+	
+ }
+					 
+	 
+
+ 
+
+   
+
+
+
+
+
