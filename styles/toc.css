@@ -24,7 +24,7 @@ Color: #2f4f4f : darkgreen --- #ffe4b5 : light gold --- #a18871 : golden yellow
 	h2 {
     font-weight: bold;
     padding: 5px 0px 5px 0px;
-    font-size: 20px;
+    font-size: 22px;
     margin-top: 10px;
     margin-right: 10px;
     margin-left: 10px;
@@ -62,7 +62,7 @@ a:link { color: #2f4f4f;  text-decoration: none;}
     font-weight: bold;
     list-style-type: decimal;
 }
-ul li { margin-top: 12px; }
+ul li { margin-top: 12px; margin-left: 12px;}
 
 
 
