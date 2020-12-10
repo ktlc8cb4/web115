@@ -62,12 +62,7 @@ a:link { color: #2f4f4f;  text-decoration: none;}
     font-weight: bold;
     list-style-type: decimal;
 }
-.lower-alpha li {list-style-type: lower-alpha; margin: 1px 0px;}
-.lower-latin {list-style-type:decimal-leading-zero;}
-.lower-number li { list-style-type: lower-roman; }
-.upper-roman {
-    list-style-type: upper-roman;
-}
+ul li { margin-top: 10px; }
 
 
 
